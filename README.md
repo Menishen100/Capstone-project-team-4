@@ -7,7 +7,6 @@ We are a collaborative project team learning to use Git, GitHub, and Visual Stud
 ## Team members 
 Member 1 - Arthur Coleman
 Member 2 - Exzavier Pickering
-Member 3 - Afriyie Menishen
 
 ### Team Leader — Afriyie Menishen
 
