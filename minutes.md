@@ -23,5 +23,5 @@
 
 ### Next meeting
 
-- **Time:** 24th August 2026 and 5:00pm
+- **Time:** 23th August 2026 and 5:00pm
 - **Focus:**finalize the setup and make corrections if needed before submitting
