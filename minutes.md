@@ -26,9 +26,6 @@
 - **Time:** 23th August 2026 and 5:00pm
 - **Focus:**finalize the setup and make corrections if needed before submitting
 
-# Meeting Minutes
-
-> **Editing rule:** Only the team leader may edit this file.
 
 ## Meeting 2
 
