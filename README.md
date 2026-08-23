@@ -4,11 +4,12 @@
 
 We are a collaborative project team learning to use Git, GitHub, and Visual Studio Code to plan, build, test, document, and present our project. This repository is the shared home for source code, documentation, meeting records, slides, and tests.
 
-## Team members
+## Team members 
+Member 1 - Arthur Coleman
+Member 2 - Exzavier Pickering
+Member 3 - Afriyie Menishen
 
-Each member adds their own short description below through a separate Git branch and pull request (or merge request).
-
-### Team Leader — _add your name_
+### Team Leader — Afriyie Menishen
 
 I coordinate the team's GitHub repository, maintain the meeting minutes, and help organize tasks and reviews.
 
