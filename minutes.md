@@ -4,9 +4,9 @@
 
 ## Meeting 1
 
-- **Date and time:** _add date, start time, end time, and time zone_
-- **Location / format:** _add location or online meeting link_
-- **Attendants:** _add names_
+- **August 22nd 2026:** _Started at 2:0PM,Ended at 9:30pm, and EST_
+- **Fayetteville / Phone:** 
+- **Attendants:** Arthur Coleman, Exzavier Pickering, Afriyie Menishen
 
 ### Agenda and tasks
 
