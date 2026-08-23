@@ -19,7 +19,7 @@
 
 ### Results and decisions
 
-- _Record decisions, completed work, blockers, and next steps here._
+- got to know each team member, completed the setup for Github account, blockers, and next steps here._
 
 ### Next meeting
 
