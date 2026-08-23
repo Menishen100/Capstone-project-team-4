@@ -12,10 +12,10 @@
 
 | Task | Owner | Due date | Status |
 | --- | --- | --- | --- |
-| Create GitHub accounts | All team members | _date_ | Not started |
-| Create public repository | Team leader | _date_ | Not started |
-| Add member profiles to README | Each team member | _date_ | Not started |
-| Create project folders and initial plan | Team | _date_ | Not started |
+| Create GitHub accounts | All team members | 24th August 2026 | completed |
+| Create public repository | Team leader | 24th August 2026 | completed |
+| Add member profiles to README | Each team member | 24th August 2026 | completed |
+| Create project folders and initial plan | Team | 24th August 2026 | completed |
 
 ### Results and decisions
 
