@@ -50,4 +50,4 @@ Assigned homework to research on project topic
 
 - **Time: ** 25th August 2026 and 8:30pm
 - **Focus: **Select or propose a capstone project topic
-** Build a complete project plan: weekly milestones, task allocation, meetings, and timeline
+- ** Build a complete project plan: weekly milestones, task allocation, meetings, and timeline
