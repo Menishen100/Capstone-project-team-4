@@ -19,7 +19,7 @@ My role on the team is to observe the project, gather relevant information, and 
 
 ### Member template — Exzavier Pickering
 
-Write 2–4 sentences about your role, interests, skills, and contribution to the project.
+My role on the team is Technical Research and Security Analysis. I will research cybersecurity concepts and technologies related to our project and provide useful information to the team. I will contribute by helping analyze security requirements, researching possible solutions, and sharing information that can help improve the project.
 
 ## Repository layout
 
