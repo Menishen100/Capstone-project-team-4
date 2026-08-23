@@ -15,7 +15,7 @@ I coordinate the team's GitHub repository, maintain the meeting minutes, and hel
 
 ### Member template — Arthur Coleman
 
-Write 2–4 sentences about your role, interests, skills, and contribution to the project.
+My role on the team is to observe the project, gather relevant information, and assist with quality assurance. I will contribute by reviewing project materials, helping identify errors or areas that need improvement, and providing feedback to the team. I will also assist with documentation and make sure the project information is clear and accurate.
 
 ### Member template — Exzavier Pickering
 
