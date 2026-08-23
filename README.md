@@ -13,11 +13,11 @@ Member 3 - Afriyie Menishen
 
 I coordinate the team's GitHub repository, maintain the meeting minutes, and help organize tasks and reviews.
 
-### Member template — _replace with your name_
+### Member template — Arthur Coleman
 
 Write 2–4 sentences about your role, interests, skills, and contribution to the project.
 
-### Member template — _replace with your name_
+### Member template — Exzavier Pickering
 
 Write 2–4 sentences about your role, interests, skills, and contribution to the project.
 
