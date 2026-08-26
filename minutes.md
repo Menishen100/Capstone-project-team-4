@@ -55,7 +55,7 @@ Assigned homework to research on project topic
 
 - ## Meeting 3
 
-- **August 25th 2026:** _Started at 8:30PM,Ended at 9:30pm, and EST_
+- **August 25th 2026:** _Started at 8:30PM,Ended at 9:40pm, and EST_
 - **Fayetteville / Phone:** 
 - **Attendants:** Arthur Coleman, Exzavier Pickering, Afriyie Menishen
 
