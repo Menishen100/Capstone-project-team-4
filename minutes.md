@@ -63,8 +63,8 @@ Assigned homework to research on project topic
 
 | Task | Owner | Due date | Status |
 | --- | --- | --- | --- |
-| Review GitHub account | All team members | 23rd August 2026 | completed |
-| week one final review | Team leader | 23rd August 2026 | completed |
+| Research project topic | All team members | 2th August 2026 | completed |
+| selected project topic | all team members | 25h August 2026 | completed |
 
 ### Results and decisions
 
