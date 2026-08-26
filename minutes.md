@@ -72,7 +72,7 @@ All members became contributors, updated files, discussed project, created a pla
 
 ### Next meeting
 
-- **Time: ** 27th August 2026 and 8:00pm
-- **Focus: **Select or propose a capstone project topic
-- ** Build a complete project plan: weekly milestones, task allocation, meetings, and timeline
+- **Time: ** 27th August 2026 and 8:30pm
+- **Focus: **Go over plan, create codee, review codes
+- **Continue to build a complete project plan: weekly milestones, task allocation, meetings, and timeline
 
