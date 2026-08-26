@@ -64,7 +64,7 @@ Assigned homework to research on project topic
 | Task | Owner | Due date | Status |
 | --- | --- | --- | --- |
 | Research project topic | All team members | 25th August 2026 | completed |
-| selected project topic | all team members | 25h August 2026 | completed |
+| selected project topic | all team members | 25th August 2026 | completed |
 
 ### Results and decisions
 
@@ -73,6 +73,6 @@ All members became contributors, updated files, discussed project, created a pla
 ### Next meeting
 
 - **Time: ** 27th August 2026 and 8:30pm
-- **Focus: **Go over plan, create codee, review codes
+- **Focus: **Go over plan, create code, review codes
 - **Continue to build a complete project plan: weekly milestones, task allocation, meetings, and timeline
 
