@@ -4,21 +4,21 @@
 
 We are a collaborative project team learning to use Git, GitHub, and Visual Studio Code to plan, build, test, document, and present our project. This repository is the shared home for source code, documentation, meeting records, slides, and tests.
 
-## Team members
+## Team members 
+Team Member 1 - Arthur Coleman, 
+Team Member 2 - Exzavier Pickering
 
-Each member adds their own short description below through a separate Git branch and pull request (or merge request).
-
-### Team Leader — _add your name_
+### Team Leader — Afriyie Menishen
 
 I coordinate the team's GitHub repository, maintain the meeting minutes, and help organize tasks and reviews.
 
-### Member template — _replace with your name_
+### Team Member 1 — Arthur Coleman
 
-Write 2–4 sentences about your role, interests, skills, and contribution to the project.
+My role on the team is to observe the project, gather relevant information, and assist with quality assurance. I will contribute by reviewing project materials, helping identify errors or areas that need improvement, and providing feedback to the team. I will also assist with documentation and make sure the project information is clear and accurate.
 
-### Member template — _replace with your name_
+### Team Member 2  — Exzavier Pickering
 
-Write 2–4 sentences about your role, interests, skills, and contribution to the project.
+My role on the team is Technical Research and Security Analysis. I will research cybersecurity concepts and technologies related to our project and provide useful information to the team. I will contribute by helping analyze security requirements, researching possible solutions, and sharing information that can help improve the project. EP
 
 ## Repository layout
 

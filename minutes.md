@@ -4,24 +4,75 @@
 
 ## Meeting 1
 
-- **Date and time:** _add date, start time, end time, and time zone_
-- **Location / format:** _add location or online meeting link_
-- **Attendants:** _add names_
+- **August 22nd 2026:** _Started at 2:0PM,Ended at 9:30pm, and EST_
+- **Fayetteville / Phone:** 
+- **Attendants:** Arthur Coleman, Exzavier Pickering, Afriyie Menishen
 
 ### Agenda and tasks
 
 | Task | Owner | Due date | Status |
 | --- | --- | --- | --- |
-| Create GitHub accounts | All team members | _date_ | Not started |
-| Create public repository | Team leader | _date_ | Not started |
-| Add member profiles to README | Each team member | _date_ | Not started |
-| Create project folders and initial plan | Team | _date_ | Not started |
+| Create GitHub accounts | All team members | 22nd August 2026 | completed |
+| Create public repository | Team leader | 22nd August 2026 | completed |
+| Add member profiles to README | Each team member | 22nd August 2026 | completed |
+| Create project folders and initial plan | Team | 22nd August 2026 | completed |
 
 ### Results and decisions
 
-- _Record decisions, completed work, blockers, and next steps here._
+- got to know each team member, completed the setup for Github account, blockers, and next steps is to decide on our project topic and do more research.
 
 ### Next meeting
 
-- **Time:** _add date and time_
-- **Focus:** _add agenda_
+- **Time:** 23rd August 2026 and 5:00pm
+- **Focus:**finalize the setup and make corrections if needed before submitting
+
+
+
+## Meeting 2
+
+- **August 23rd 2026:** _Started at 5:00PM,Ended at 7:30pm, and EST_
+- **Fayetteville / Phone:** 
+- **Attendants:** Arthur Coleman, Exzavier Pickering, Afriyie Menishen
+
+### Agenda and tasks
+
+| Task | Owner | Due date | Status |
+| --- | --- | --- | --- |
+| Review GitHub account | All team members | 23rd August 2026 | completed |
+| week one final review | Team leader | 23rd August 2026 | completed |
+
+### Results and decisions
+
+Agreed that all files were set correctly and completed for submission
+Assigned homework to research on project topic
+
+### Next meeting
+
+- **Time: ** 25th August 2026 and 8:30pm
+- **Focus: **Select or propose a capstone project topic
+- ** Build a complete project plan: weekly milestones, task allocation, meetings, and timeline
+
+
+- ## Meeting 3
+
+- **August 25th 2026:** _Started at 8:30PM,Ended at 9:40pm, and EST_
+- **Fayetteville / Phone:** 
+- **Attendants:** Arthur Coleman, Exzavier Pickering, Afriyie Menishen
+
+### Agenda and tasks
+
+| Task | Owner | Due date | Status |
+| --- | --- | --- | --- |
+| Research project topic | All team members | 25th August 2026 | completed |
+| selected project topic | all team members | 25th August 2026 | completed |
+
+### Results and decisions
+
+All members became contributors, updated files, discussed project, created a plan. 
+
+### Next meeting
+
+- **Time: ** 27th August 2026 and 8:30pm
+- **Focus: **Go over plan, create code, review codes
+- **Continue to build a complete project plan: weekly milestones, task allocation, meetings, and timeline
+
