@@ -62,6 +62,6 @@ The system uses a weighted voting ensemble whose weights and decision threshold 
 
 ## Important project references
 
-- `docs/project-plan.md` is the approved working plan, timeline, schedule, and evaluation protocol.
+- `project-plan.md` is the approved working plan, timeline, schedule, and evaluation protocol.
 - `minutes.md` is the official meeting record and leader-owned.
 - When instructions conflict, prioritize the current assignment requirements and agreed team decisions over illustrative examples from class handouts.
