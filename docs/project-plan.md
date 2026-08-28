@@ -41,9 +41,9 @@ The toolkit will include an in-house LSB embedding utility to create an evaluati
 
 | Role | Primary responsibilities | Integration deliverables |
 | --- | --- | --- |
-| Team Leader | Ensemble design, grid-search calibration, integration, project tracking, meeting minutes, final packaging | Voting module, reproducible experiment runner, final CLI/GUI, release checklist |
-| Member A | Chi-square and RS detectors, unit tests, score normalization documentation | `chi_square.py`, `rs_analysis.py`, detector tests, method notes |
-| Member B | Difference Histogram detector, LSB dataset generator, ROC/AUC visualizations | `difference_histogram.py`, `lsb_embed.py`, dataset metadata, evaluation plots |
+| Afriyie | Ensemble design, grid-search calibration, integration, project tracking, meeting minutes, final packaging | Voting module, reproducible experiment runner, final CLI/GUI, release checklist |
+| Arthur | Chi-square and RS detectors, unit tests, score normalization documentation | `chi_square.py`, `rs_analysis.py`, detector tests, method notes |
+| Exzavier | Difference Histogram detector, LSB dataset generator, ROC/AUC visualizations | `difference_histogram.py`, `lsb_embed.py`, dataset metadata, evaluation plots |
 | All members | Literature review, code review, data-quality checks, report/slides/demo preparation | Reviewed pull requests, report contributions, rehearsal feedback |
 
 
