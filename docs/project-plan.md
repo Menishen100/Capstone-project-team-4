@@ -46,7 +46,6 @@ The toolkit will include an in-house LSB embedding utility to create an evaluati
 | Member B | Difference Histogram detector, LSB dataset generator, ROC/AUC visualizations | `difference_histogram.py`, `lsb_embed.py`, dataset metadata, evaluation plots |
 | All members | Literature review, code review, data-quality checks, report/slides/demo preparation | Reviewed pull requests, report contributions, rehearsal feedback |
 
-The team leader is the only editor of `minutes.md`. Other members should submit proposed minutes as comments or send them to the leader.
 
 ## 5. Technical design
 
