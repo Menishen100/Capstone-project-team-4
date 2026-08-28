@@ -76,3 +76,23 @@ All members became contributors, updated files, discussed project, created a pla
 - **Focus: **Go over plan, create code, review codes
 - **Continue to build a complete project plan: weekly milestones, task allocation, meetings, and timeline
 
+
+- ## Meeting 4
+August 27th 2026: Started at 8:30PM,Ended at 11:00pm, and EST
+
+Fayetteville / Phone:
+
+Attendants: Arthur Coleman, Exzavier Pickering, Afriyie Menishen
+
+Agenda and tasks
+Task	Owner	Due date	Status
+Discuss project topic	All team members 27th August 2026	completed
+Updated Folder	all team members	27th August 2026	completed
+Results and decisions
+Updated files, discussed project, created a plan.
+
+Next meeting
+**Time: ** 30th August 2026 and 8:30pm
+**Focus: **Review assignment before submission, Discuss week 3, submit assignment
+**Continue to build a complete project plan: weekly milestones, task allocation, meetings, and timeline
+
