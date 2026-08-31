@@ -100,3 +100,27 @@ Next meeting
 **Focus: **Review assignment before submission, Discuss week 3, submit assignment
 **Continue to build a complete project plan: weekly milestones, task allocation, meetings, and timeline
 
+- ## Meeting 5
+August 30th 2026: Started at 8:30PM,Ended at 9:00pm, and EST
+
+Fayetteville / Phone:
+
+Attendants: Arthur Coleman, Exzavier Pickering, Afriyie Menishen
+
+### Agenda and tasks
+
+| Task | Owner | Due date | Status |
+| --- | --- | --- | --- |
+| review and update project plan | All team members | 30th August 2026 | completed |
+| research and planning for week 3| all team members | 30th August 2026 | completed |
+ 
+## Results and decisions
+
+finalized and submitted our project plan and timeline, discussed week 3 task
+
+Next meeting
+**Time: ** 30th August 2026 and 8:30pm
+**Focus: **Review assignment before submission, Discuss week 3, submit assignment
+**Continue to build a complete project plan: weekly milestones, task allocation, meetings, and timeline
+
+
