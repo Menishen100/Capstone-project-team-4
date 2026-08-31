@@ -91,7 +91,8 @@ Attendants: Arthur Coleman, Exzavier Pickering, Afriyie Menishen
 | Discuss project topic | All team members | 27th August 2026 | completed |
 | Updated Folder | all team members | 27th August 2026 | completed |
  
-Results and decisions
+## Results and decisions
+
 Updated files, discussed project, created a plan.
 
 Next meeting
