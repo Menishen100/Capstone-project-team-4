@@ -120,9 +120,8 @@ finalized and submitted our project plan and timeline, discussed week 3 task
 
 Next meeting
 **Time: ** 1st September 2026 and 8:30pm
-**Focus: ** Research about on: 
+**Focus: ** Research about: 
 - common detector interface and image preprocessing rules;
 -  how to implement Chi-square prototype.
-**Continue to build a complete project plan: weekly milestones, task allocation, meetings, and timeline
 
 
