@@ -84,10 +84,13 @@ Fayetteville / Phone:
 
 Attendants: Arthur Coleman, Exzavier Pickering, Afriyie Menishen
 
-Agenda and tasks
-Task	Owner	Due date	Status
-Discuss project topic	All team members 27th August 2026	completed
-Updated Folder	all team members	27th August 2026	completed
+### Agenda and tasks
+
+| Task | Owner | Due date | Status |
+| --- | --- | --- | --- |
+| Discuss project topic | All team members | 27th August 2026 | completed |
+| Updated Folder | all team members | 27th August 2026 | completed |
+ 
 Results and decisions
 Updated files, discussed project, created a plan.
 
