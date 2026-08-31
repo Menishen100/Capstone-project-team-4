@@ -119,8 +119,10 @@ Attendants: Arthur Coleman, Exzavier Pickering, Afriyie Menishen
 finalized and submitted our project plan and timeline, discussed week 3 task
 
 Next meeting
-**Time: ** 30th August 2026 and 8:30pm
-**Focus: **Review assignment before submission, Discuss week 3, submit assignment
+**Time: ** 1st September 2026 and 8:30pm
+**Focus: ** Research about on: 
+- common detector interface and image preprocessing rules;
+-  how to implement Chi-square prototype.
 **Continue to build a complete project plan: weekly milestones, task allocation, meetings, and timeline
 
 
