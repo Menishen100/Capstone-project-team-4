@@ -95,8 +95,8 @@ data/              # metadata only; large images may be linked externally
 | Week | Planned work | Owner(s) | Milestone / evidence |
 | --- | --- | --- | --- |
 | W2 | Confirm project scope; create repository; assign roles; review Chi-square, RS, and DH theory; approve this plan. | All; leader coordinates | Approved plan, repository, initial minutes |
-| W3 | Define common detector interface and image preprocessing rules; implement Chi-square prototype. | Leader, Member A | Detector API and Chi-square test case |
-| W4 | Implement RS and DH prototypes; review code and align all outputs to score convention. | Member A, Exzavier | Three standalone modules run on sample images |
+| W3 | Define common detector interface and image preprocessing rules; implement Chi-square prototype. | Leader, Arthur | Detector API and Chi-square test case |
+| W4 | Implement RS and DH prototypes; review code and align all outputs to score convention. | Arthur, Exzavier | Three standalone modules run on sample images |
 | W5 | Implement LSB embedder; gather clean images; generate paired stego images and metadata. | Exzavier; all validate | 100 clean + 100 stego dataset target reached |
 | W6 | Add unit tests and per-detector diagnostic output; run preliminary scores across development set. | All | Detector score table and defect list |
 | W7 | Normalize scores; inspect false positives/negatives; refine preprocessing and document decisions. | All | Preliminary validation summary |
