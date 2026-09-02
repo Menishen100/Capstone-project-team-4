@@ -41,9 +41,9 @@ The toolkit will include an in-house LSB embedding utility to create an evaluati
 
 | Role | Primary responsibilities | Integration deliverables |
 | --- | --- | --- |
-| Team Leader | Ensemble design, grid-search calibration, integration, project tracking, meeting minutes, final packaging | Voting module, reproducible experiment runner, final CLI/GUI, release checklist |
-| Member A | Chi-square and RS detectors, unit tests, score normalization documentation | `chi_square.py`, `rs_analysis.py`, detector tests, method notes |
-| Member B | Difference Histogram detector, LSB dataset generator, ROC/AUC visualizations | `difference_histogram.py`, `lsb_embed.py`, dataset metadata, evaluation plots |
+| Team Leader- Afriyie | Ensemble design, grid-search calibration, integration, project tracking, meeting minutes, final packaging | Voting module, reproducible experiment runner, final CLI/GUI, release checklist |
+| Member A- Arthur | Chi-square and RS detectors, unit tests, score normalization documentation | `chi_square.py`, `rs_analysis.py`, detector tests, method notes |
+| Member B- Exzavier | Difference Histogram detector, LSB dataset generator, ROC/AUC visualizations | `difference_histogram.py`, `lsb_embed.py`, dataset metadata, evaluation plots |
 | All members | Literature review, code review, data-quality checks, report/slides/demo preparation | Reviewed pull requests, report contributions, rehearsal feedback |
 
 
@@ -95,14 +95,14 @@ data/              # metadata only; large images may be linked externally
 | Week | Planned work | Owner(s) | Milestone / evidence |
 | --- | --- | --- | --- |
 | W2 | Confirm project scope; create repository; assign roles; review Chi-square, RS, and DH theory; approve this plan. | All; leader coordinates | Approved plan, repository, initial minutes |
-| W3 | Define common detector interface and image preprocessing rules; implement Chi-square prototype. | Leader, Member A | Detector API and Chi-square test case |
-| W4 | Implement RS and DH prototypes; review code and align all outputs to score convention. | Member A, Member B | Three standalone modules run on sample images |
-| W5 | Implement LSB embedder; gather clean images; generate paired stego images and metadata. | Member B; all validate | 100 clean + 100 stego dataset target reached |
+| W3 | Define common detector interface and image preprocessing rules; implement Chi-square prototype. | Leader, Arthur | Detector API and Chi-square test case |
+| W4 | Implement RS and DH prototypes; review code and align all outputs to score convention. | Arthur, Exzavier | Three standalone modules run on sample images |
+| W5 | Implement LSB embedder; gather clean images; generate paired stego images and metadata. | Exzavier; all validate | 100 clean + 100 stego dataset target reached |
 | W6 | Add unit tests and per-detector diagnostic output; run preliminary scores across development set. | All | Detector score table and defect list |
 | W7 | Normalize scores; inspect false positives/negatives; refine preprocessing and document decisions. | All | Preliminary validation summary |
 | W8 | Package midterm evidence: dataset description and three working detectors. | Leader; all contribute | Midterm report/demo |
 | W9 | Implement weighted-voting ensemble and baseline equal-weight model. | Leader | Ensemble module with reproducible config |
-| W10 | Run grid search for weights and threshold using development/validation sets. | Leader; Member B supports plots | Selected weights, threshold, validation results |
+| W10 | Run grid search for weights and threshold using development/validation sets. | Leader; Exzavier supports plots | Selected weights, threshold, validation results |
 | W11 | Run held-out evaluation; calculate accuracy, precision, recall, F1, ROC, AUC, and confusion matrices. | All | Metrics tables and plots |
 | W12 | Investigate error cases and robustness across payload rates; add regression tests. | All | Error analysis and expanded tests |
 | W13 | Polish CLI; optionally add GUI only if core evaluation is finished; prepare user documentation. | Leader; all review | Usable release candidate |

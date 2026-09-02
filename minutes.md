@@ -76,3 +76,52 @@ All members became contributors, updated files, discussed project, created a pla
 - **Focus: **Go over plan, create code, review codes
 - **Continue to build a complete project plan: weekly milestones, task allocation, meetings, and timeline
 
+
+- ## Meeting 4
+August 27th 2026: Started at 8:30PM,Ended at 11:00pm, and EST
+
+Fayetteville / Phone:
+
+Attendants: Arthur Coleman, Exzavier Pickering, Afriyie Menishen
+
+### Agenda and tasks
+
+| Task | Owner | Due date | Status |
+| --- | --- | --- | --- |
+| Discuss project topic | All team members | 27th August 2026 | completed |
+| Updated Folder | all team members | 27th August 2026 | completed |
+ 
+## Results and decisions
+
+Updated files, discussed project, created a plan.
+
+Next meeting
+**Time: ** 30th August 2026 and 8:30pm
+**Focus: **Review assignment before submission, Discuss week 3, submit assignment
+**Continue to build a complete project plan: weekly milestones, task allocation, meetings, and timeline
+
+- ## Meeting 5
+August 30th 2026: Started at 8:30PM,Ended at 9:00pm, and EST
+
+Fayetteville / Phone:
+
+Attendants: Arthur Coleman, Exzavier Pickering, Afriyie Menishen
+
+### Agenda and tasks
+
+| Task | Owner | Due date | Status |
+| --- | --- | --- | --- |
+| review and update project plan | All team members | 30th August 2026 | completed |
+| research and planning for week 3| all team members | 30th August 2026 | completed |
+ 
+## Results and decisions
+
+finalized and submitted our project plan and timeline, discussed week 3 task
+
+Next meeting
+**Time: ** 1st September 2026 and 8:30pm
+**Focus: ** Research about: 
+- common detector interface and image preprocessing rules;
+-  how to implement Chi-square prototype.
+
+
