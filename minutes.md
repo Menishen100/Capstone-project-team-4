@@ -143,7 +143,7 @@ Attendants: Arthur Coleman, Exzavier Pickering, Afriyie Menishen
 researched and got better unserstanding for how to set up the detector API, proccessing rules and testing samples 
 
 ## Next meeting
-**Time: ** 4th September 2026 and 8:30pm - 9:30pm
+**Time: ** 5th September 2026 and 8:30pm - 9:30pm
 **Focus: ** Research about: 
 - Drafting a Define the common detector API and image preprocessing rules;
 -  drafting the Chi-square detector prototype for testing
