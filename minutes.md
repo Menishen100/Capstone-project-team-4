@@ -124,4 +124,55 @@ Next meeting
 - common detector interface and image preprocessing rules;
 -  how to implement Chi-square prototype.
 
+- ## Meeting 6
+September 1st 2026: Started at 8:30PM,Ended at 9:00pm, and EST
+
+Fayetteville / Phone:
+
+Attendants: Arthur Coleman, Exzavier Pickering, Afriyie Menishen
+
+### Agenda and tasks
+
+| Task | Owner | Due date | Status |
+| --- | --- | --- | --- |
+| research on common detector interface and image preprocessing rules | All team members | 1st september 2026 | completed |
+| research how to implement Chi-square prototype| all team members | 1st september 2026 | completed |
+ 
+## Results and decisions
+
+researched and got better unserstanding for how to set up the detector API, proccessing rules and testing samples 
+
+## Next meeting
+**Time: ** 4th September 2026 and 8:30pm - 9:30pm
+**Focus: ** Research about: 
+- Drafting a Define the common detector API and image preprocessing rules;
+-  drafting the Chi-square detector prototype for testing
+-  Prepare sample test images and validate preprocessing/Chi-square outputs
+
+## Meeting 7
+
+- ** 5th September 2026 and 8:30pm:** _Started at 8:30PM,Ended at 9:30pm, and EST_
+- **Fayetteville / Phone:** 
+- **Attendants:** Arthur Coleman, Exzavier Pickering, Afriyie Menishen
+
+### Agenda and tasks
+
+| Task | Owner | Due date | Status |
+| --- | --- | --- | --- |
+| Define the common detector API and image preprocessing rules | Leader team members | 5th september 2026 | completed |
+| built Chi-square detector prototype for testing | Arthur Coleman | 5th september 2026 | completed |
+| Prepared sample test images and validate preprocessing/Chi-square outputs | Exzavier Pickering | 5th september 2026 | completed |
+
+ 
+### Results and decisions
+
+- reviewd and completed pull request for  detector API and image preprocessing rules
+- reviewed and approved the Chi-square detector prototype for testing
+- reviewed and approved sample test images
+### Next meeting
+
+- **Time:** 8th September 2026 _Started at 8:30PM,Ended at 9:30pm, and EST_
+- **Focus: **Reviewing the requirement and research for our week 4 plan.
+
+
 
