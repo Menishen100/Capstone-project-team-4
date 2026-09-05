@@ -124,4 +124,9 @@ Next meeting
 - common detector interface and image preprocessing rules;
 -  how to implement Chi-square prototype.
 
+## Week 3 technical progress
+
+- Menishen completed the common detector interface, shared image preprocessing,
+  preprocessing tests, and preprocessing/API documentation.
+
 
