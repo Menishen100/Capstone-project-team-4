@@ -1,5 +1,5 @@
-"""Shared interfaces and implementations for statistical steganalysis detectors."""
+"""Statistical steganalysis detector implementations."""
 
-from .base_detector import BaseDetector
+from .chi_square import ChiSquareDetector
 
-__all__ = ["BaseDetector"]
+__all__ = ["ChiSquareDetector"]
