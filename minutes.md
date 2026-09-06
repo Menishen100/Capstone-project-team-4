@@ -124,6 +124,10 @@ Next meeting
 - common detector interface and image preprocessing rules;
 -  how to implement Chi-square prototype.
 
+## Week 3 technical progress
+
+- Menishen completed the common detector interface, shared image preprocessing,
+  preprocessing tests, and preprocessing/API documentation.
 - ## Meeting 6
 September 1st 2026: Started at 8:30PM,Ended at 9:00pm, and EST
 
