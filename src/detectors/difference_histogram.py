@@ -2,6 +2,8 @@ from pathlib import Path
 from PIL import Image
 import numpy as np
 
+from .base_detector import BaseDetector
+
 def difference_histogram(channel):
     """
     Build a 511-bin Difference Histogram for one 2-D image channel.
@@ -209,6 +211,64 @@ def analyze_difference_histogram(image_path):
             "channels": channel_results
         }
 
+
+class DifferenceHistogramDetector(BaseDetector):
+    """Adapt the Difference Histogram prototype to the shared detector API.
+
+    The existing path-based function remains available for standalone use. This
+    adapter accepts the preprocessed NumPy arrays used by every project
+    detector, reuses the existing histogram and roughness functions, and
+    exposes their result through the common score-and-diagnostics convention.
+    """
+
+    @staticmethod
+    def _validate_image(image):
+        """Validate a grayscale or RGB preprocessing output without mutating it."""
+        pixels = np.asarray(image)
+
+        if pixels.ndim not in (2, 3) or (pixels.ndim == 3 and pixels.shape[2] != 3):
+            raise ValueError("image must be a grayscale (H, W) or RGB (H, W, 3) array")
+        if not np.issubdtype(pixels.dtype, np.integer):
+            raise ValueError("image pixels must use an integer data type")
+        if np.any(pixels < 0) or np.any(pixels > 255):
+            raise ValueError("image pixel values must be in the range 0 to 255")
+
+        return pixels.astype(np.uint8, copy=False)
+
+    def analyze(self, image):
+        """Return a bounded prototype score and Difference Histogram diagnostics.
+
+        ``raw_roughness / (1 + raw_roughness)`` is a monotonic bounded mapping
+        used only to satisfy the shared Week 4 interface. It is not calibrated
+        probability or an ensemble weight; later project calibration may replace
+        this prototype normalization.
+        """
+        pixels = self._validate_image(image)
+        channels = [("L", pixels)] if pixels.ndim == 2 else [
+            ("R", pixels[:, :, 0]),
+            ("G", pixels[:, :, 1]),
+            ("B", pixels[:, :, 2]),
+        ]
+
+        channel_results = []
+        for channel_name, channel in channels:
+            diagnostic = histogram_roughness(difference_histogram(channel))
+            channel_results.append({"channel": channel_name, **diagnostic})
+
+        raw_roughness = float(np.mean([
+            result["roughness"] for result in channel_results
+        ]))
+        score = raw_roughness / (1.0 + raw_roughness)
+
+        return {
+            "score": float(np.clip(score, 0.0, 1.0)),
+            "diagnostics": {
+                "raw_roughness": raw_roughness,
+                "score_normalization": "raw_roughness / (1 + raw_roughness)",
+                "channels": channel_results,
+            },
+        }
+
 if __name__ == "__main__":
 
     # Example usage
@@ -248,4 +308,3 @@ if __name__ == "__main__":
         f"\nRaw DH Roughness: "
         f"{results['raw_dh_roughness']:.4f}"
     )
-    
