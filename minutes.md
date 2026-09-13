@@ -190,7 +190,7 @@ researched and got better unserstanding for how to set up the detector API, proc
 | --- | --- | --- | --- |
 | Implement RS Analysis prototype | Arthur Coleman | 13th september 2026 | completed |
 | Implement Difference Histogram prototype |  Exzavier Pickering | 13th september 2026 | completed |
-| Integrate all three detector outputs, review common score convention and run test |  | 13th september 2026 | completed | 
+| Integrate all three detector outputs, review common score convention and run test |Team leader  | 13th september 2026 | completed | 
 | Reviewed all completed task for week 4 and make update | All team members | 13th September 2026 | completed |
 
 
