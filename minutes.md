@@ -180,7 +180,7 @@ researched and got better unserstanding for how to set up the detector API, proc
 
   ## Meeting 8 ( week 4 )
 
-- ** 8th September and 13th September 2026 and 8:30pm:** _Started at 8:30PM,Ended at 9:30pm, and EST_
+- ** 8th September and 13th September 2026 and 8:30pm:** _Started at 12:30PM,Ended at 1:30pm, and EST_
 - **Fayetteville / Phone:** 
 - **Attendants:** Arthur Coleman, Exzavier Pickering, Afriyie Menishen
 
