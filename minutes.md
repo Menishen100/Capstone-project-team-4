@@ -205,7 +205,7 @@ researched and got better unserstanding for how to set up the detector API, proc
   
 ### Next meeting
 
-- **Time:** 15th and 18th September 2026 _Started at 8:30PM,Ended at 9:30pm, and EST_
+- **Time:** 15th and 17th September 2026 _Started at 8:30PM,Ended at 9:30pm, and EST_
 - **Focus: **Reviewing the requirement and research for our week 5 plan.
 
 
