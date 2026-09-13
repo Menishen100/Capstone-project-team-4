@@ -5,7 +5,7 @@
 ## Meeting 8
 
 - **Dates:** September 8 and September 13, 2026
-- **Time:** 8:30 PM to 9:30 PM EST
+- **Time:** 12:30 PM to 1:30 PM EST
 - **Location / format:** Fayetteville / Phone
 - **Attendees:** Arthur Coleman, Exzavier Pickering, Afriyie Menishen
 
@@ -28,5 +28,5 @@
 
 ### Next meeting
 
-- **Time:** September 15 and September 18, 2026, 8:30 PM to 9:30 PM
+- **Time:** September 15 and September 17, 2026, 8:30 PM to 9:30 PM
 - **Focus:** Review requirements and research for the Week 5 plan.
