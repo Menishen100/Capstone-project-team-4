@@ -178,5 +178,33 @@ researched and got better unserstanding for how to set up the detector API, proc
 - **Time:** 8th September 2026 _Started at 8:30PM,Ended at 9:30pm, and EST_
 - **Focus: **Reviewing the requirement and research for our week 4 plan.
 
+  ## Meeting 8 ( week 4 )
+
+- ** 8th September and 13th September 2026 and 8:30pm:** _Started at 8:30PM,Ended at 9:30pm, and EST_
+- **Fayetteville / Phone:** 
+- **Attendants:** Arthur Coleman, Exzavier Pickering, Afriyie Menishen
+
+### Agenda and tasks
+
+| Task | Owner | Due date | Status |
+| --- | --- | --- | --- |
+| Implement RS Analysis prototype | Arthur Coleman | 13th september 2026 | completed |
+| Implement Difference Histogram prototype |  Exzavier Pickering | 13th september 2026 | completed |
+| Integrate all three detector outputs, review common score convention and run test |  | 13th september 2026 | completed | 
+| Reviewed all completed task for week 4 and make update | All team members | 13th September 2026 | completed |
+
+
+ 
+### Results and decisions
+
+- RS Analysis prototype completed and reviewed.
+- Difference Histogram prototype completed and reviewed.
+- Chi-square, RS, and Difference Histogram now follow the common detector output convention.
+- Cross-detector integration testing was added.
+- Week 4 prototype scores remain uncalibrated and will be refined during later planned evaluation/calibration work.
+
+- **Time:** 15th and 18th September 2026 _Started at 8:30PM,Ended at 9:30pm, and EST_
+- **Focus: **Reviewing the requirement and research for our week 5 plan.
+
 
 
