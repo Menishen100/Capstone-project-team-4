@@ -202,6 +202,8 @@ researched and got better unserstanding for how to set up the detector API, proc
 - Chi-square, RS, and Difference Histogram now follow the common detector output convention.
 - Cross-detector integration testing was added.
 - Week 4 prototype scores remain uncalibrated and will be refined during later planned evaluation/calibration work.
+  
+### Next meeting
 
 - **Time:** 15th and 18th September 2026 _Started at 8:30PM,Ended at 9:30pm, and EST_
 - **Focus: **Reviewing the requirement and research for our week 5 plan.
