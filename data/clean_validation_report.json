@@ -1,0 +1,409 @@
+{
+  "expected_count": 100,
+  "discovered_count": 100,
+  "valid_count": 0,
+  "is_valid": false,
+  "records": [],
+  "issues": [
+    {
+      "filename": "pair_001_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_002_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_003_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_004_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_005_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_006_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_007_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_008_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_009_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_010_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_011_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_012_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_013_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_014_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_015_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_016_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_017_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_018_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_019_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_020_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_021_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_022_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_023_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_024_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_025_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_026_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_027_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_028_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_029_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_030_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_031_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_032_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_033_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_034_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_035_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_036_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_037_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_038_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_039_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_040_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_041_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_042_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_043_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_044_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_045_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_046_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_047_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_048_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_049_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_050_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_051_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_052_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_053_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_054_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_055_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_056_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_057_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_058_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_059_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_060_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_061_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_062_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_063_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_064_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_065_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_066_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_067_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_068_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_069_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_070_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_071_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_072_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_073_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_074_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_075_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_076_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_077_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_078_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_079_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_080_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_081_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_082_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_083_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_084_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_085_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_086_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_087_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_088_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_089_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_090_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_091_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_092_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_093_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_094_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_095_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_096_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_097_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_098_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_099_clean.png",
+      "message": "missing metadata row"
+    },
+    {
+      "filename": "pair_100_clean.png",
+      "message": "missing metadata row"
+    }
+  ]
+}
