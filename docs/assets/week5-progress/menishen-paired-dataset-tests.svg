@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1750" height="535" viewBox="0 0 1750 535" role="img" aria-labelledby="title description">
+  <title id="title">Menishen paired-dataset test result</title>
+  <desc id="description">Terminal transcript of six passing paired dataset generation and validation tests.</desc>
+  <rect width="1750" height="535" fill="#0d1117"/>
+  <rect x="0" y="0" width="1750" height="42" fill="#161b22"/>
+  <circle cx="25" cy="21" r="7" fill="#ff5f57"/><circle cx="49" cy="21" r="7" fill="#ffbd2e"/><circle cx="73" cy="21" r="7" fill="#28c840"/>
+  <text x="100" y="28" fill="#c9d1d9" font-family="Consolas, 'Courier New', monospace" font-size="18">Windows PowerShell — Menishen Week 5 dataset workflow evidence</text>
+  <text x="30" y="82" fill="#c9d1d9" font-family="Consolas, 'Courier New', monospace" font-size="19">collected 6 items</text>
+  <text x="30" y="133" fill="#c9d1d9" font-family="Consolas, 'Courier New', monospace" font-size="18">test_generation_creates_pairs_and_complete_metadata</text><text x="1070" y="133" fill="#56d364" font-family="Consolas, 'Courier New', monospace" font-size="18">PASSED [ 16%]</text>
+  <text x="30" y="188" fill="#c9d1d9" font-family="Consolas, 'Courier New', monospace" font-size="18">test_hundred_pair_target_uses_the_required_60_20_20_splits</text><text x="1070" y="188" fill="#56d364" font-family="Consolas, 'Courier New', monospace" font-size="18">PASSED [ 33%]</text>
+  <text x="30" y="243" fill="#c9d1d9" font-family="Consolas, 'Courier New', monospace" font-size="18">test_pairs_are_reproducible_with_the_same_seed_and_config</text><text x="1070" y="243" fill="#56d364" font-family="Consolas, 'Courier New', monospace" font-size="18">PASSED [ 50%]</text>
+  <text x="30" y="298" fill="#c9d1d9" font-family="Consolas, 'Courier New', monospace" font-size="18">test_validator_rejects_a_pair_with_the_wrong_stego_mapping</text><text x="1070" y="298" fill="#56d364" font-family="Consolas, 'Courier New', monospace" font-size="18">PASSED [ 66%]</text>
+  <text x="30" y="353" fill="#c9d1d9" font-family="Consolas, 'Courier New', monospace" font-size="18">test_generator_refuses_unvalidated_clean_sources</text><text x="1070" y="353" fill="#56d364" font-family="Consolas, 'Courier New', monospace" font-size="18">PASSED [ 83%]</text>
+  <text x="30" y="408" fill="#c9d1d9" font-family="Consolas, 'Courier New', monospace" font-size="18">test_split_assignment_requires_exact_target_count</text><text x="1070" y="408" fill="#56d364" font-family="Consolas, 'Courier New', monospace" font-size="18">PASSED [100%]</text>
+  <text x="30" y="482" fill="#56d364" font-family="Consolas, 'Courier New', monospace" font-size="25">6 passed in 1.35s</text>
+</svg>
