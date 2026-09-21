@@ -11,7 +11,6 @@ Week 5 established the reproducible workflow required to create the project's pa
 
 The workflow is designed for the approved project-plan split: 60 development pairs, 20 validation pairs, and 20 held-out test pairs. It records the source identifier, clean and stego filenames, payload rate, random seed, color mode, dimensions, split, image format, source/license note, and embedding statistics.
 
-The full Week 5 dataset milestone is **not yet achieved**. Although 100 clean PNG files are present, `data/clean_metadata.csv` has no factual source/license rows. The validator therefore correctly reports 0 valid clean records, and the generator refuses to create the 100 stego counterparts. This protects the project from making unsupported source or license claims.
 
 ## 2. Subtasks completed
 
