@@ -29,5 +29,5 @@
 
 ### Next meeting
 
-- **Time:** To be scheduled
-- **Focus:** Complete the clean-image source inventory, generate and validate the 100 clean/stego pairs, and begin the Week 6 diagnostic-output and preliminary-score work.
+- **Time:** September 22 and September 24, 2026, 8:30 PM to 9:30 PM EST
+- **Focus:** Complete the clean-image source inventory and generate the paired dataset, then begin the Week 6 work: add per-detector diagnostic output and run preliminary scores across the development split.
