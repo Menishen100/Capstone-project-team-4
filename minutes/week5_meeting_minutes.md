@@ -13,7 +13,7 @@
 
 | Task | Owner | Due date | Status |
 | --- | --- | --- | --- |
-| Validate and prepare the clean-image collection and source inventory | Arthur Coleman | September 17, 2026 | In progress |
+| Validate and prepare the clean-image collection and source inventory | Arthur Coleman | September 17, 2026 | completed |
 | Implement and test the LSB embedder | Exzavier Pickering | September 17, 2026 | Completed |
 | Build the paired dataset-generation, metadata, and integrity-validation workflow | Afriyie Menishen | September 17, 2026 | Completed |
 | Review the integrated Week 5 workflow and run the full test suite | All team members | September 17, 2026 | Completed |
