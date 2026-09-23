@@ -42,5 +42,7 @@ class ChiSquareDetector:
             "diagnostics": {
                 "chi_square": float(statistic),
                 "p_value": float(p_value),
+                "value_pairs_analyzed": len(observed) // 2,
+                "samples_analyzed": int(pixels.size),
             },
         }

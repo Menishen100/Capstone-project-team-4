@@ -81,5 +81,7 @@ class RSAnalysisDetector(BaseDetector):
                 "unchanged_groups": unchanged,
                 "groups_analyzed": groups_analyzed,
                 "rs_statistic": float(rs_statistic),
+                "channels_analyzed": len(channels),
+                "samples_analyzed": groups_analyzed * self._GROUP_SIZE,
             },
         }
