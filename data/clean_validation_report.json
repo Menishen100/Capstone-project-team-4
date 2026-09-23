@@ -1,409 +1,909 @@
 {
   "expected_count": 100,
   "discovered_count": 100,
-  "valid_count": 0,
-  "is_valid": false,
-  "records": [],
-  "issues": [
+  "valid_count": 100,
+  "is_valid": true,
+  "records": [
     {
       "filename": "pair_001_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-001",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "91aa374897c8f48bbc031cdb597bad5eea910a9605b059e73a0c9cef7683e729"
     },
     {
       "filename": "pair_002_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-002",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "0c3a9a405746dd71a67b6ead98333101fb2a426c45be62a5d4e8ac8fa86ed8ad"
     },
     {
       "filename": "pair_003_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-003",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "27dec6fc0a3b7357fa587d9248a8b4b1afc1b166a352facbd4350f53f4051282"
     },
     {
       "filename": "pair_004_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-004",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "798c408d16ff46f6fd0e3c49711b71065ed17d10479252a70c0fd94741e8aae4"
     },
     {
       "filename": "pair_005_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-005",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "9b2bfa546dcebd0153b727e4662c7a0e8c8baea2bc651dcc54f74284d46423e7"
     },
     {
       "filename": "pair_006_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-006",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "a34f0409c32a5e9f92f20db33710aac601998b02bc7c3ec337d238544b055dc1"
     },
     {
       "filename": "pair_007_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-007",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "d0b8f3bca48793a313e962333f0c0c355107124f662b9febccc9c80aa8f9740a"
     },
     {
       "filename": "pair_008_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-008",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "4823f49acb5c5bf55dbe740165dad76831b741231c781c8644ae188f40d38a9f"
     },
     {
       "filename": "pair_009_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-009",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "7d980c82e33e1a2a533fd5487678cca112d99953f7fbcdf5bd21845741b7f932"
     },
     {
       "filename": "pair_010_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-010",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "5bbd0cfe05ab150179f08abcf0f5a0960ac2b5d2b5722169513d929007008b01"
     },
     {
       "filename": "pair_011_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-011",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "bdbf541ec6af3fb67d7bc854942a45e0cf00b85b0d9c4f057cda5b0845e60bbe"
     },
     {
       "filename": "pair_012_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-012",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "8c29a7b8efcd4ebff34a66a46fcb0262038eab59436136187d5eca1a314519c3"
     },
     {
       "filename": "pair_013_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-013",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "0f02e10eda9a7fecc3b04dbddeb5c8d0f8aefc3da2ca6509fc96eee4545f0ed7"
     },
     {
       "filename": "pair_014_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-014",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "41b21cbbc33083eadc73db444e5976892dbadad2ecebb753729ef2abfd85abe3"
     },
     {
       "filename": "pair_015_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-015",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "acc97b3f9da250f6f0d3000370869e842577f37b740c3832ce781c0379b9dc5c"
     },
     {
       "filename": "pair_016_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-016",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "6b6a28d612d5c255cd3d9c213c92fa399d09bba785ac35a85f4777347e53e229"
     },
     {
       "filename": "pair_017_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-017",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "ee5ff3a2e4d697212f686505c74a3de2699aae3589ebdc0a17e686988c376c59"
     },
     {
       "filename": "pair_018_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-018",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "8c76b96443ad0c0497a37ffaeb16a9a211da530a33bdac2e0e5d987dcf5f8bdf"
     },
     {
       "filename": "pair_019_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-019",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "5a1cd5a27be8c89a6e656cc8363640368a7a19d3a9d5d06b48ef711ead1b76f2"
     },
     {
       "filename": "pair_020_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-020",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "7db9c6b7d304e198d2258822705dbf642e61e7e3aed7348c58d1ea2f06535a43"
     },
     {
       "filename": "pair_021_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-021",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "f515eb949fc3f2f8bf99b1b6d5fdcbf16807295d8e8fd82c36f722ee37b431e5"
     },
     {
       "filename": "pair_022_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-022",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "c4ecc69a8017b6ec7308b10faf9cc046e5a84c67498a2b33bc36b21c65c11837"
     },
     {
       "filename": "pair_023_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-023",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "0510be0dd01856972420f08ce3b9b984519a67a88f5140cedecb31e0c4ca21cc"
     },
     {
       "filename": "pair_024_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-024",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "df59e7c96b6053a658940a1574ca5aef84dc7065ed1a3e4f0a6b8995f660763c"
     },
     {
       "filename": "pair_025_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-025",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "46eb63f4146cd3718ca510fcd712c9ca31a5fff672fea2cd6ea7d07216ff9fd7"
     },
     {
       "filename": "pair_026_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-026",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "db4580634ecdac01c013aca5dabd2633606d08d86f0e132008cdb46b225a0f7e"
     },
     {
       "filename": "pair_027_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-027",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "831e508a60d9f12fdc99866f7967f90375608f66a08d6891d743ab7c547987c1"
     },
     {
       "filename": "pair_028_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-028",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "a574fd5ab9e4e677a42988e35b80ebc38eff922599ea1718678358460ae1d271"
     },
     {
       "filename": "pair_029_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-029",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "9d3fbcb1e2683b3e50661cb9c94bcd0a759cf1f55ddc6deff6c84a87128859e1"
     },
     {
       "filename": "pair_030_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-030",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "68f14399d470200f0ee4654d9f0b5360c8691ea2a1592b417caccf1d7fe9847f"
     },
     {
       "filename": "pair_031_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-031",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "d6eca3fac1f8b07e37111fe7f51bd3b51e11feac5724aaa2ba50f33f516459db"
     },
     {
       "filename": "pair_032_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-032",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "331825dc3da8f7d9133853ea998fad3996bc54ac1b511514fc153281e7e5e23b"
     },
     {
       "filename": "pair_033_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-033",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "6e34ec358684acb92af809f9c88d24750ff594c44382c7e5df34a3e51e197cf5"
     },
     {
       "filename": "pair_034_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-034",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "e94f65905a780761db23b917686a8d34a4df161f9434eb3f9b982b81fd2cb567"
     },
     {
       "filename": "pair_035_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-035",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "7e7bfdd24ddbf944514ac813609903c29800179e2d2eaa7bdab208e88cbcffdf"
     },
     {
       "filename": "pair_036_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-036",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "da69666efd0f0b8ac1c1bbc87578fe86aadfd26a134b7adafd27cefb1bd4a6f6"
     },
     {
       "filename": "pair_037_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-037",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "677d8cb64b47d679cf86a7161d400a676eabee3c25ac3e880754b2bf5842b69b"
     },
     {
       "filename": "pair_038_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-038",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "aa92d4a8f85112910740171e1bb8bcb9b748c0851cc5966de66998c8a68c7f4c"
     },
     {
       "filename": "pair_039_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-039",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "9d1527f673f2a693575ad9124e625644ef6bf6b9e3c128174703db78d72861e3"
     },
     {
       "filename": "pair_040_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-040",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "a44cf5d73b8e10fa7a49011122ec96fb3ed52b24d36aacd5db0cb055fd7c72e8"
     },
     {
       "filename": "pair_041_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-041",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "226e0589c71a459fe6f13d0e188db452082a770344ccd8d6a802e304d6b85185"
     },
     {
       "filename": "pair_042_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-042",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "b51c6bbde421b45657f8ca48cdba9b932cee3276836ef938d48dcfb2eee9bcf6"
     },
     {
       "filename": "pair_043_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-043",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "663671acd278961340e28df249e894e58fc0d0bf2422923c788532036b481106"
     },
     {
       "filename": "pair_044_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-044",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "d8af44686d6437e0156770986aaa0e6b773b7b57364d7e9940905e17d46abc5d"
     },
     {
       "filename": "pair_045_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-045",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "7a4e7be05d484aff1e71eaea80bfb5c81c2e72f44328e29a2e30679e33dc0943"
     },
     {
       "filename": "pair_046_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-046",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "a943e1038f8e8c3949ac3ceb08dc061ac92879cc3096b655815abfa4cfeec3db"
     },
     {
       "filename": "pair_047_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-047",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "db72ebbbc9239ad5113be997fca55f8345c3b065355f5e6e8e78ca8374f5437f"
     },
     {
       "filename": "pair_048_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-048",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "b07d8183f8909b8d2e446bd18dfd0084bc174ed47e774483c0b8e737c4aa31b3"
     },
     {
       "filename": "pair_049_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-049",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "09e206269b486e625c5d5769bb21fa4c38e66d76c442e8aca4e4640b3a076418"
     },
     {
       "filename": "pair_050_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-050",
+      "format": "PNG",
+      "color_mode": "RGB",
+      "width": 256,
+      "height": 256,
+      "content_hash": "892177dc607387ec9702b44663c99fe2c05c161d074ecc3cf54b8158d3d683b9"
     },
     {
       "filename": "pair_051_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-051",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "08fc7a040938c4c35199cca7e3e12150009064eb0dcd687deac3e4b64360f0f5"
     },
     {
       "filename": "pair_052_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-052",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "6e74cd600a4970dede2900913c2d314e75e10903af4cab6d65ba7a889222c25d"
     },
     {
       "filename": "pair_053_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-053",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "6727c71f259f1d7a7189f3529e2eb68021363b2f793f76509f6878e5afb978b7"
     },
     {
       "filename": "pair_054_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-054",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "bb5ab5987f131578f92c5e349285363927dc48912e92dfa266216f74b90c5159"
     },
     {
       "filename": "pair_055_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-055",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "c78a7b50fbcd44b19a90f4ec89a9d37a365696dd4ebee7d0d675922e589ab130"
     },
     {
       "filename": "pair_056_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-056",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "a0a5feeb239c20453d30c575a1bf3dbfbe8992021546fe098b5b3d7617bea197"
     },
     {
       "filename": "pair_057_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-057",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "62e81548cffff18d92a79a837f2094833b63d5da5da62ae83cc4f7341b73a9c7"
     },
     {
       "filename": "pair_058_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-058",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "09a00dc669bf8ac8e99eea40175cd35005c913983c8c370a4c81a4385e225fc8"
     },
     {
       "filename": "pair_059_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-059",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "af729fdb5fef8209307c3beb4f3e20515082306fd7c9079076669137ae48b8b3"
     },
     {
       "filename": "pair_060_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-060",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "5d8dc939a6eb2b235dd731d7074d7f55bee043b1d5bd87740175b730b793a03c"
     },
     {
       "filename": "pair_061_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-061",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "6d43c6d1c86b2c9b9e90f1afef36cd19ee7d5c14148dc8ebcc94c6d3f01aed09"
     },
     {
       "filename": "pair_062_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-062",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "607350bf35ad275a1b18284c601120be3a0fff1d86acbcca4de3208dc487de68"
     },
     {
       "filename": "pair_063_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-063",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "f70a36c836ce19bc30c616255aac6668c55319bb02bf33c9d3d5370f81c97d85"
     },
     {
       "filename": "pair_064_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-064",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "98af90fbdec8ef424662414cfe7a6efe8326456543a745351b5e89b4f01b4725"
     },
     {
       "filename": "pair_065_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-065",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "a495de01c468baf040ad2dc33f275c5cd3e3ae2aa8920760a16e819f8df5d8a5"
     },
     {
       "filename": "pair_066_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-066",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "3dfdda44660fc3379b3135eefe539849594a004431138804058e226e75e3ef32"
     },
     {
       "filename": "pair_067_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-067",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "ade306d463adcea21968373af7eadfa622d80d2d8b7e2a1548bc13867c6318a2"
     },
     {
       "filename": "pair_068_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-068",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "06366e6c2606ab06e75d69087864a239e18da78707c4575333871baf75817e4c"
     },
     {
       "filename": "pair_069_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-069",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "a02af874f8a30eaad9a0d4b3a5a0d558d0b22ec25b8b2ef7b76e81e114656667"
     },
     {
       "filename": "pair_070_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-070",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "8c61f8886a96a19ae117c106e63fc14b657770235bd055fcc8274870d890af3c"
     },
     {
       "filename": "pair_071_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-071",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "83e9c5b27a6685e5a1f470e387e0d0090b75afe136af4be99532a437fb487d59"
     },
     {
       "filename": "pair_072_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-072",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "884837d52876fb61f2fbc435957aa46974d47a8471260be59c31812da3812267"
     },
     {
       "filename": "pair_073_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-073",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "e91b369386ea3e648236059b5bf0a98cf086d7b5d07485d9a17278044022154c"
     },
     {
       "filename": "pair_074_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-074",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "5a5951f44be7e1414740d9cb50443748d97b73287db873e942f5a31dfaee62b0"
     },
     {
       "filename": "pair_075_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-075",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "e218384a5991541f530597f4c7797364ffaf0c13f1a085ff5f686ec396c9ad53"
     },
     {
       "filename": "pair_076_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-076",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "7f01e44a76bf565e6c3ba20faebabe6c1eefb8f1aeaec7e9dc332dce198b83ae"
     },
     {
       "filename": "pair_077_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-077",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "cdb1aa5bb98c9c63e68ee46b7906dbb2b0ad001a80a809bded3247773668bcd3"
     },
     {
       "filename": "pair_078_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-078",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "539d672e5d3f2af9b879587c2af1cf9135eec56aefa5ecc93273e52f51300fc1"
     },
     {
       "filename": "pair_079_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-079",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "f818f967da16bfcd927af54089d0fcd383f0cc3685de10c2f5f0410096801677"
     },
     {
       "filename": "pair_080_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-080",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "7f65b1728b9568b9f5e9f2f5abbd23014aed19bb87897077c0efe1434918ef6d"
     },
     {
       "filename": "pair_081_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-081",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "4357aff309a8dfaa90dff3f1b6e53eae1da602900f53c94bc3ac872e8ec5e6c0"
     },
     {
       "filename": "pair_082_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-082",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "03a704bfe2fd4a2cc1ea79232a28530f774626f22c742dfbf05c8bf1f89ffd0c"
     },
     {
       "filename": "pair_083_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-083",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "e040f22bcd85fc356c876cfd57a8d4b5d1f5cfae75207b0c839d7b4e2783eca4"
     },
     {
       "filename": "pair_084_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-084",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "1d00f2e33a0ae2156c9b3d1a70cf44d69c05ebf791a439b033d10b77e6fb1212"
     },
     {
       "filename": "pair_085_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-085",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "661bb408c02eb6f30d8c2946f6251d3ea0744cc216ac8af7b63f882dc4e4214d"
     },
     {
       "filename": "pair_086_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-086",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "ce6b3e366122aa7335241ba7310fe65bd414b3b7d5042be286e72d70225d82b1"
     },
     {
       "filename": "pair_087_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-087",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "33e1e46b5be0d1507a0d63e08c1f23edcbcabc7907a97c8de41c794ca16a0a14"
     },
     {
       "filename": "pair_088_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-088",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "b24a041fa631bd13ce9bfc78f05b2ff7d2de1b52014bd936db97a54539d805e1"
     },
     {
       "filename": "pair_089_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-089",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "4acc6fa563606da720c723b66c39382629ab86a611871549143f99d4a128e8b0"
     },
     {
       "filename": "pair_090_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-090",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "8199707a57858cf0cbbb0db3757a51b5a109cf58e69d42c361909208fc2f6433"
     },
     {
       "filename": "pair_091_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-091",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "729875add4563ea9b85d9543208575a913a91845b71685f9f826e95c9a750b10"
     },
     {
       "filename": "pair_092_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-092",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "80d587e0de0cb408fb91f16f328492c681d6e39c4814587bfbb0b185dcff91a5"
     },
     {
       "filename": "pair_093_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-093",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "1e264c2f68480556d0bbb22bea2b1fa357e5efb31824d89fa62bab8ea4b41667"
     },
     {
       "filename": "pair_094_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-094",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "fde93c1cc3c347cee85cff7147ada66852fc720dcb75a484e7301eb06994cba2"
     },
     {
       "filename": "pair_095_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-095",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "53e9137e1f0638d2539540529bf38a9702dcdc9e81cfd2d5656ffbf1fb15725b"
     },
     {
       "filename": "pair_096_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-096",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "ddd29a026eb725b512d7edc71bb5aefbf9b7e3afcfe14441dc51586e0135702f"
     },
     {
       "filename": "pair_097_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-097",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "4077ace0039ca9f790ee545e79e27e68192f6a7ddcdddd7231be469e64a40875"
     },
     {
       "filename": "pair_098_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-098",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "784998b8c09c1640a57cdf1b05e26b3fa130003f6e3332aca441b127dddfce05"
     },
     {
       "filename": "pair_099_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-099",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "432b1c1658e095799f07eb718440121b209bffde2cd95695e53eab4b9eee83c7"
     },
     {
       "filename": "pair_100_clean.png",
-      "message": "missing metadata row"
+      "source_id": "source-100",
+      "format": "PNG",
+      "color_mode": "L",
+      "width": 256,
+      "height": 256,
+      "content_hash": "bb101f19f576866b2d66a2e2537cbe5d689aa19507b0d6b90ff2e54b24393fe5"
     }
-  ]
+  ],
+  "issues": []
 }
