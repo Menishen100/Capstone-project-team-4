@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from PIL import Image
 
-from src.lsb_embedder import embed_lsb
+from src.lsb_embedder import embed_lsb, embed_clean_folder
 
 
 def create_grayscale_image(path):
@@ -395,3 +395,158 @@ def test_invalid_random_seeds_are_rejected(
             random_seed=random_seed,
             stego_dir=tmp_path / "stego"
         )
+
+
+def test_clean_folder_processes_all_images(tmp_path):
+    clean_dir = tmp_path / "clean"
+    stego_dir = tmp_path / "stego"
+
+    clean_dir.mkdir()
+
+    create_rgb_image(
+        clean_dir / "pair_001_clean.png"
+    )
+
+    create_rgb_image(
+        clean_dir / "pair_050_clean.png"
+    )
+
+    create_grayscale_image(
+        clean_dir / "pair_051_clean.png"
+    )
+
+    create_grayscale_image(
+        clean_dir / "pair_100_clean.png"
+    )
+
+    results = embed_clean_folder(
+        payload_rate=0.25,
+        clean_dir=clean_dir,
+        stego_dir=stego_dir
+    )
+
+    assert len(results) == 4
+
+
+def test_clean_folder_preserves_rgb_and_grayscale_modes(tmp_path):
+    clean_dir = tmp_path / "clean"
+    stego_dir = tmp_path / "stego"
+
+    clean_dir.mkdir()
+
+    create_rgb_image(
+        clean_dir / "pair_001_clean.png"
+    )
+
+    create_rgb_image(
+        clean_dir / "pair_050_clean.png"
+    )
+
+    create_grayscale_image(
+        clean_dir / "pair_051_clean.png"
+    )
+
+    create_grayscale_image(
+        clean_dir / "pair_100_clean.png"
+    )
+
+    results = embed_clean_folder(
+        payload_rate=0.25,
+        clean_dir=clean_dir,
+        stego_dir=stego_dir
+    )
+
+    with Image.open(
+        results[0]["Stego_image"]
+    ) as image:
+        assert image.mode == "RGB"
+
+    with Image.open(
+        results[1]["Stego_image"]
+    ) as image:
+        assert image.mode == "RGB"
+
+    with Image.open(
+        results[2]["Stego_image"]
+    ) as image:
+        assert image.mode == "L"
+
+    with Image.open(
+        results[3]["Stego_image"]
+    ) as image:
+        assert image.mode == "L"
+
+
+def test_clean_folder_uses_unique_seeds(tmp_path):
+    clean_dir = tmp_path / "clean"
+    stego_dir = tmp_path / "stego"
+
+    clean_dir.mkdir()
+
+    create_rgb_image(
+        clean_dir / "pair_001_clean.png"
+    )
+
+    create_rgb_image(
+        clean_dir / "pair_002_clean.png"
+    )
+
+    create_grayscale_image(
+        clean_dir / "pair_051_clean.png"
+    )
+
+    results = embed_clean_folder(
+        payload_rate=0.25,
+        base_seed=100,
+        clean_dir=clean_dir,
+        stego_dir=stego_dir
+    )
+
+    assert results[0]["Random_seed"] == 100
+    assert results[1]["Random_seed"] == 101
+    assert results[2]["Random_seed"] == 102
+
+
+def test_clean_folder_creates_all_stego_images(tmp_path):
+    clean_dir = tmp_path / "clean"
+    stego_dir = tmp_path / "stego"
+
+    clean_dir.mkdir()
+
+    create_rgb_image(
+        clean_dir / "pair_001_clean.png"
+    )
+
+    create_rgb_image(
+        clean_dir / "pair_050_clean.png"
+    )
+
+    create_grayscale_image(
+        clean_dir / "pair_051_clean.png"
+    )
+
+    create_grayscale_image(
+        clean_dir / "pair_100_clean.png"
+    )
+
+    embed_clean_folder(
+        payload_rate=0.25,
+        clean_dir=clean_dir,
+        stego_dir=stego_dir
+    )
+
+    assert (
+        stego_dir / "pair_001_stego.png"
+    ).exists()
+
+    assert (
+        stego_dir / "pair_050_stego.png"
+    ).exists()
+
+    assert (
+        stego_dir / "pair_051_stego.png"
+    ).exists()
+
+    assert (
+        stego_dir / "pair_100_stego.png"
+    ).exists()

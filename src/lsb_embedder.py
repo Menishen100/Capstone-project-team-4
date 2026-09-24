@@ -73,7 +73,8 @@ def build_output_path(source_path, stego_dir):
 
 def embed_lsb(source_image, payload_rate, random_seed, stego_dir = "dataset/stego"):
     """
-    Create a randomized LSB-replacement stego image.
+    Create a randomized LSB-replacement stego image
+    of one clean image of choice.
 
     Supports image modes:
         L
@@ -366,16 +367,104 @@ def embed_lsb(source_image, payload_rate, random_seed, stego_dir = "dataset/steg
         "Changed_values": changed_values
     }
 
+
+def embed_clean_folder(payload_rate, base_seed = 100, clean_dir = "dataset/clean", stego_dir = "dataset/stego"):
+    """
+    Creates stego counterparts for every PNG image
+    inside the dataset/clean folder.
+    
+    Each clean image will be processed using embed_lsb().
+    
+    Parameters:
+        clean_dir:
+            Folder containing clean PNG images.
+            
+        stego_dir:
+            Folder where stego images will be saved.
+            
+        payload_rate:
+            Payload rate used for each image.
+            
+        base_seed:
+            Starting seed used to create unique reproducible
+            seeds for each image.
+            
+    Returns:
+        List of metadata dictionaries, one for each
+        generated stego image.
+    """
+
+    clean_dir = Path(clean_dir)
+    stego_dir = Path(stego_dir)
+
+    # Make sure clean folder exists
+    if not clean_dir.exists():
+        raise FileNotFoundError(
+            f"Clean image folder does not exist: {clean_dir}"
+        )
+
+    if not clean_dir.is_dir():
+        raise ValueError(
+            f"Clean image path is not a folder: {clean_dir}"
+        )
+
+    # Make sure base seed is valid
+    if not isinstance(base_seed, (int, np.integer)):
+        raise ValueError(
+            "Base seed must be an integer"
+        )
+
+    if base_seed < 0:
+        raise ValueError(
+            "Base seed must be 0 or greater"
+        )
+
+    # Find every PNG in dataset/clean
+    clean_images = sorted(
+        clean_dir.glob("*.png")
+    )
+
+    if not clean_images:
+        raise ValueError(
+            f"No PNG images found in: {clean_dir}"
+        )
+
+    # Store metadata returned for every image
+    results = []
+
+    for index, image_path in enumerate(
+        clean_images
+    ):
+
+        # Give every image its own reproducible seed
+        image_seed = base_seed + index
+
+        result = embed_lsb(
+            source_image = image_path,
+            payload_rate = payload_rate,
+            random_seed = image_seed,
+            stego_dir = stego_dir
+        )
+
+        results.append(result)
+
+    return results
+
+
 # Test
 if __name__ == "__main__":
 
-    result = embed_lsb(
-        source_image = "dataset/clean/pair_001_clean.png",
-        payload_rate = 0.25,
-        random_seed = 100
+    results = embed_clean_folder(
+        payload_rate = 0.25
     )
 
-    print("\nLSB Embedding Complete")
+    print(f"\nLSB Embedding Complete: {len(results)} image(s) processed.")
 
-    for key, value in result.items():
-         print(f"{key}: {value}")
+    for result in results:
+        print(f"\nClean: {result['Source_image']}")
+        print(f"Stego: {result['Stego_image']}")
+        print(f"Payload Rate: {result['Payload_rate']}")
+        print(f"Random Seed: {result['Random_seed']}")
+        print(f"Image Mode: {result['Image_mode']}")
+        print(f"Dimensions: {result['Dimensions']}")
+        print(f"Changed Values: {result['Changed_values']}")
