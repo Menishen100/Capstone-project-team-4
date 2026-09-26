@@ -26,8 +26,21 @@ def difference_histogram(channel):
             "difference_histogram() requires a 2-D image channel."
         )
 
+    if not np.issubdtype(channel.dtype, np.integer):
+        raise ValueError(
+            "Image channel values must use an integer data type"
+        )
+
+    if np.any(channel < 0) or np.any(channel > 255):
+        raise ValueError(
+            "Image channel values must be in the range 0 to 255"
+        )
+
     # Convert channel to int16 so negative differences are preserved
-    channel = np.asarray(channel, dtype=np.int16)
+    channel = channel.astype(
+        np.int16,
+        copy = False
+    )
 
     # Calculate horizontal and vertical adjacent-pixel differences
     horizontal_diff = np.diff(channel, axis=1)
@@ -70,12 +83,20 @@ def histogram_roughness(hist, central_radius = 32):
     hist = np.asarray(hist)
 
     # Make sure histogram contains all 511 possible pixel differences
-    if len(hist) != 511:
+    if hist.ndim != 1 or hist.size != 511:
         raise ValueError(
-            "Difference Histogram must contain 511 bins."
+            "Difference Histogram must be a 1-D array containing 511 bins."
         )
 
     # Make sure the radius is within the valid DH range
+    if (
+        isinstance(central_radius, bool)
+        or not isinstance(central_radius, (int, np.integer))
+    ):
+        raise ValueError(
+            "Central radius must be an integer."
+        )
+
     if central_radius < 0 or central_radius > 255:
         raise ValueError(
             "Central radius must be between 0 and 255."
@@ -86,7 +107,7 @@ def histogram_roughness(hist, central_radius = 32):
     # Zero difference count is located at index 255
     zero_difference_count = hist[255]
 
-    # Select central region where central_raius = 32
+    # Select central region around difference 0
     start = 255 - central_radius
     end = 255 + central_radius + 1
 
@@ -134,8 +155,8 @@ def analyze_difference_histogram(image_path):
         - One channel (L) is analyzed.
 
     RGB:
-        - Three channels (R, G, B) are analyzed individually
-          and average their roughness values.
+        - Three channels (R, G, B) are analyzed individually,
+          and their roughness values are averaged.
 
     Parameters:
         image_path: Path to the image file to be analyzed.
@@ -150,7 +171,7 @@ def analyze_difference_histogram(image_path):
     # Make sure the requested image exists
     if not image_path.exists():
         raise FileNotFoundError(
-            f"Image file not exist: {image_path}"
+            f"Image file does not exist: {image_path}"
         )
 
     with Image.open(image_path) as img:
@@ -239,7 +260,7 @@ class DifferenceHistogramDetector(BaseDetector):
         """Return a bounded prototype score and Difference Histogram diagnostics.
 
         ``raw_roughness / (1 + raw_roughness)`` is a monotonic bounded mapping
-        used only to satisfy the shared Week 4 interface. It is not calibrated
+        used only to satisfy the shared detector interface. It is not calibrated
         probability or an ensemble weight; later project calibration may replace
         this prototype normalization.
         """
