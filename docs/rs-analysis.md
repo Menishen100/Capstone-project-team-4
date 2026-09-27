@@ -48,6 +48,8 @@ greater suspicion according to the current team score convention.
         "unchanged_groups": 0,
         "groups_analyzed": 0,
         "rs_statistic": 0.0,
+        "channels_analyzed": 1,
+        "samples_analyzed": 0,
     },
 }
 ```
