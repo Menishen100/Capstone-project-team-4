@@ -41,7 +41,7 @@
 
 ### Next meeting
 
-- **Dates and time:** To be confirmed by the team.
+- **Dates and time:** September 28 and October 1, 2026.
 - **Focus:** Complete the Week 7 plan: normalize the prototype scores, inspect
   false positives and false negatives on the appropriate development work,
   refine preprocessing where evidence supports it, and document all decisions.
