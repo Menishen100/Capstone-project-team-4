@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="650" viewBox="0 0 1500 650" role="img" aria-labelledby="title desc">
+  <title id="title">Menishen Week 6 development scoring run</title>
+  <desc id="desc">Terminal evidence showing 60 clean and 60 stego development images scored with zero detector errors.</desc>
+  <rect width="1500" height="650" fill="#111827"/>
+  <rect x="0" y="0" width="1500" height="52" fill="#1f2937"/>
+  <circle cx="30" cy="26" r="9" fill="#ef4444"/><circle cx="58" cy="26" r="9" fill="#f59e0b"/><circle cx="86" cy="26" r="9" fill="#22c55e"/>
+  <text x="120" y="33" fill="#e5e7eb" font-family="Consolas, monospace" font-size="21">Windows PowerShell — Week 6 preliminary development scoring</text>
+  <text x="42" y="105" fill="#facc15" font-family="Consolas, monospace" font-size="22">(.venv) PS C:\CapstoneProject&gt;</text>
+  <text x="402" y="105" fill="#f9fafb" font-family="Consolas, monospace" font-size="22">python -m src.evaluation.run_preliminary_scores</text>
+  <text x="42" y="175" fill="#f9fafb" font-family="Consolas, monospace" font-size="26">Development scoring complete</text>
+  <text x="42" y="230" fill="#86efac" font-family="Consolas, monospace" font-size="25">Clean images scored: 60</text>
+  <text x="42" y="275" fill="#86efac" font-family="Consolas, monospace" font-size="25">Stego images scored: 60</text>
+  <text x="42" y="320" fill="#86efac" font-family="Consolas, monospace" font-size="25">Total images scored: 120</text>
+  <text x="42" y="395" fill="#f9fafb" font-family="Consolas, monospace" font-size="25">Chi-square errors: 0</text>
+  <text x="42" y="440" fill="#f9fafb" font-family="Consolas, monospace" font-size="25">RS errors: 0</text>
+  <text x="42" y="485" fill="#f9fafb" font-family="Consolas, monospace" font-size="25">DH errors: 0</text>
+  <text x="42" y="555" fill="#f9fafb" font-family="Consolas, monospace" font-size="22">Output: data/development_detector_scores.csv</text>
+  <text x="42" y="612" fill="#facc15" font-family="Consolas, monospace" font-size="22">(.venv) PS C:\CapstoneProject&gt;</text>
+</svg>
