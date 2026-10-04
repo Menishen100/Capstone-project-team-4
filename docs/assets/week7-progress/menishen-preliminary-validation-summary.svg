@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="720" viewBox="0 0 1500 720" role="img" aria-labelledby="title desc">
+  <title id="title">Menishen Week 7 preliminary validation summary</title>
+  <desc id="desc">Terminal evidence showing the 120-image development-only summary and candidate-case counts for three detectors.</desc>
+  <rect width="1500" height="720" fill="#111827"/>
+  <rect width="1500" height="52" fill="#1f2937"/>
+  <circle cx="30" cy="26" r="9" fill="#ef4444"/><circle cx="58" cy="26" r="9" fill="#f59e0b"/><circle cx="86" cy="26" r="9" fill="#22c55e"/>
+  <text x="120" y="33" fill="#e5e7eb" font-family="Consolas, monospace" font-size="21">Windows PowerShell — Week 7 preliminary validation summary</text>
+  <text x="42" y="105" fill="#facc15" font-family="Consolas, monospace" font-size="22">(.venv) PS C:\CapstoneProject&gt;</text>
+  <text x="402" y="105" fill="#f9fafb" font-family="Consolas, monospace" font-size="22">python -m src.evaluation.summarize_validation</text>
+  <text x="42" y="170" fill="#f9fafb" font-family="Consolas, monospace" font-size="26">Week 7 preliminary validation summary complete</text>
+  <text x="42" y="220" fill="#86efac" font-family="Consolas, monospace" font-size="24">Development images analyzed: 120</text>
+  <text x="42" y="290" fill="#f9fafb" font-family="Consolas, monospace" font-size="24">Chi-square: clean mean=0.140474; stego mean=0.188673; candidate FP=0; candidate FN=0</text>
+  <text x="42" y="345" fill="#f9fafb" font-family="Consolas, monospace" font-size="24">RS: clean mean=0.368833; stego mean=0.290116; candidate FP=2; candidate FN=2</text>
+  <text x="42" y="400" fill="#f9fafb" font-family="Consolas, monospace" font-size="24">Difference Histogram: clean mean=0.340618; stego mean=0.309736; candidate FP=3; candidate FN=0</text>
+  <text x="42" y="480" fill="#86efac" font-family="Consolas, monospace" font-size="24">Summary written to: docs/week7-preliminary-validation-summary.md</text>
+  <text x="42" y="555" fill="#facc15" font-family="Consolas, monospace" font-size="22">(.venv) PS C:\CapstoneProject&gt;</text>
+  <text x="42" y="610" fill="#f9fafb" font-family="Consolas, monospace" font-size="22">python -m pytest tests/test_summarize_validation.py -q</text>
+  <text x="42" y="655" fill="#86efac" font-family="Consolas, monospace" font-size="22">3 passed</text>
+</svg>
