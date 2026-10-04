@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="940" viewBox="0 0 1400 940" role="img" aria-labelledby="title desc">
+  <title id="title">Arthur Week 7 Chi-square and RS development-only review</title>
+  <desc id="desc">Terminal-style evidence with the actual development-only descriptive statistics and candidate range-overlap counts.</desc>
+  <rect width="1400" height="940" fill="#0d1117"/>
+  <rect x="24" y="24" width="1352" height="892" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="60" y="76" fill="#e6edf3" font-family="Consolas, monospace" font-size="25">Windows PowerShell — Arthur Week 7 development-only review</text>
+  <text x="60" y="126" fill="#7ee787" font-family="Consolas, monospace" font-size="20">&gt; python -m src.evaluation.review_arthur_detectors</text>
+  <text x="60" y="178" fill="#e6edf3" font-family="Consolas, monospace" font-size="22">Chi-square:</text>
+  <text x="95" y="214" fill="#c9d1d9" font-family="Consolas, monospace" font-size="20">Clean mean: 0.140474     Stego mean: 0.188673</text>
+  <text x="95" y="248" fill="#c9d1d9" font-family="Consolas, monospace" font-size="20">Clean median: 0.000000   Stego median: 0.000000</text>
+  <text x="95" y="282" fill="#c9d1d9" font-family="Consolas, monospace" font-size="20">Candidate FP count: 0    Candidate FN count: 0</text>
+  <text x="95" y="316" fill="#c9d1d9" font-family="Consolas, monospace" font-size="20">Candidate FP files: none; Candidate FN files: none</text>
+  <text x="60" y="378" fill="#e6edf3" font-family="Consolas, monospace" font-size="22">RS:</text>
+  <text x="95" y="414" fill="#c9d1d9" font-family="Consolas, monospace" font-size="20">Clean mean: 0.368833     Stego mean: 0.290116</text>
+  <text x="95" y="448" fill="#c9d1d9" font-family="Consolas, monospace" font-size="20">Clean median: 0.329166   Stego median: 0.252701</text>
+  <text x="95" y="482" fill="#c9d1d9" font-family="Consolas, monospace" font-size="20">Candidate FP count: 2    Candidate FN count: 2</text>
+  <text x="95" y="516" fill="#c9d1d9" font-family="Consolas, monospace" font-size="20">Candidate FP: pair_033_clean.png, pair_039_clean.png</text>
+  <text x="95" y="550" fill="#c9d1d9" font-family="Consolas, monospace" font-size="20">Candidate FN: pair_008_stego.png, pair_012_stego.png</text>
+  <text x="60" y="622" fill="#7ee787" font-family="Consolas, monospace" font-size="20">&gt; python -m pytest tests/test_arthur_week7_review.py -v</text>
+  <text x="60" y="662" fill="#56d364" font-family="Consolas, monospace" font-size="22">8 passed in 0.28s</text>
+  <text x="60" y="734" fill="#f2cc60" font-family="Consolas, monospace" font-size="18">Candidate counts use opposite-class score-range overlap only.</text>
+  <text x="60" y="768" fill="#f2cc60" font-family="Consolas, monospace" font-size="18">No threshold, normalization, ranking, classifier, or ensemble was selected.</text>
+  <text x="60" y="842" fill="#8b949e" font-family="Consolas, monospace" font-size="17">Data source: data/development_detector_scores.csv (60 clean + 60 matched stego rows; development split only)</text>
+</svg>

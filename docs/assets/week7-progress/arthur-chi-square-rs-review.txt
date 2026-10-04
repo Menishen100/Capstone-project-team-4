@@ -1,0 +1,24 @@
+Arthur Week 7 - Chi-square and RS development-only review
+
+Chi-square:
+  Clean mean: 0.140474
+  Stego mean: 0.188673
+  Clean median: 0.000000
+  Stego median: 0.000000
+  Candidate FP count: 0
+  Candidate FN count: 0
+  Candidate FP files: none
+  Candidate FN files: none
+
+RS:
+  Clean mean: 0.368833
+  Stego mean: 0.290116
+  Clean median: 0.329166
+  Stego median: 0.252701
+  Candidate FP count: 2
+  Candidate FN count: 2
+  Candidate FP files: pair_033_clean.png, pair_039_clean.png
+  Candidate FN files: pair_008_stego.png, pair_012_stego.png
+
+Candidate counts use opposite-class score-range overlap only.
+No threshold, normalization, ranking, classifier, or ensemble was selected.
