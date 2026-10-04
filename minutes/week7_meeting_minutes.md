@@ -45,7 +45,7 @@
 ### Next meeting
 
 - **Dates:** October 6 and October 8, 2026
-- **Time:** To be confirmed by the team.
+- **Time:** 8:30 PM to 9:30 PM EST
 - **Focus:** Complete the Week 8 plan: package the midterm evidence, including
   the dataset description, three working detectors, supporting test evidence,
   and the midterm report/demo materials.
