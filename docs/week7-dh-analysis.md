@@ -102,8 +102,8 @@ differences away from zero.
 
 | Image Mode | Clean Mean Score | Stego Mean Score |
 |---|---:|---:|
-| RGB | `INSERT NEW OUTPUT` | `INSERT NEW OUTPUT` |
-| Grayscale | `INSERT NEW OUTPUT` | `INSERT NEW OUTPUT` |
+| RGB | 0.340734 | 0.309075 |
+| Grayscale | 0.340036 | 0.313040 |
 
 These values are descriptive only. No mode-specific threshold was selected.
 
@@ -145,7 +145,7 @@ Run:
 
 Updated result:
 
-`INSERT NEW PYTEST RESULT`
+`7 passed`
 
 The tests cover normalization, development filtering, score statistics,
 candidate cases, RGB/grayscale summaries, diagnostics, source pairing,
