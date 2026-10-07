@@ -126,12 +126,13 @@ Commands and observed results:
 
 Both runs used the repository's virtual environment because system Python did
 not have pytest installed. Pytest's temporary test data required the approved
-Windows Temp access.
+Windows Temp access. The attached screenshot shows Arthur's focused rerun,
+which completed with **26 passed in 1.22s**.
 
-![Arthur Week 8 focused Chi-square and RS test output](assets/week8-arthur-focused-tests.svg)
+![Arthur Week 8 focused Chi-square and RS test output](assets/week8-arthur-focused-tests.png)
 
-*Arthur Week 8 — focused test evidence. The focused suite finished with 26
-passed.*
+*Arthur Week 8 — PowerShell screenshot of the focused test command and passing
+results.*
 
 ## 6. Midterm Readiness
 
