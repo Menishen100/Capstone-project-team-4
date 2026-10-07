@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="620" viewBox="0 0 1500 620" role="img" aria-labelledby="title desc">
+  <title id="title">Menishen Week 8 full test suite evidence</title>
+  <desc id="desc">Terminal-style summary of the Week 8 integrated pytest run: 123 passed in 16.66 seconds.</desc>
+  <rect width="1500" height="620" fill="#0d1117"/>
+  <rect width="1500" height="64" fill="#161b22"/>
+  <circle cx="36" cy="32" r="10" fill="#ff5f56"/>
+  <circle cx="68" cy="32" r="10" fill="#ffbd2e"/>
+  <circle cx="100" cy="32" r="10" fill="#27c93f"/>
+  <text x="136" y="41" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#c9d1d9">Week 8 integrated test evidence</text>
+  <text x="52" y="120" font-family="Consolas, 'Courier New', monospace" font-size="26" fill="#58a6ff">PS C:\Users\afriy\OneDrive\Documents\ChatGPT\CapstoneProject&gt;</text>
+  <text x="52" y="164" font-family="Consolas, 'Courier New', monospace" font-size="25" fill="#e3b341">.\.venv\Scripts\python.exe -m pytest -v -p no:cacheprovider</text>
+  <text x="52" y="230" font-family="Consolas, 'Courier New', monospace" font-size="23" fill="#c9d1d9">platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0</text>
+  <text x="52" y="270" font-family="Consolas, 'Courier New', monospace" font-size="23" fill="#c9d1d9">rootdir: C:\Users\afriy\OneDrive\Documents\ChatGPT\CapstoneProject</text>
+  <text x="52" y="310" font-family="Consolas, 'Courier New', monospace" font-size="23" fill="#c9d1d9">collected 123 items</text>
+  <text x="52" y="374" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#3fb950">tests/test_detector_integration.py .................................. PASSED</text>
+  <text x="52" y="414" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#3fb950">tests/test_dataset_generation.py ................................... PASSED</text>
+  <text x="52" y="454" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#3fb950">tests/test_preliminary_scores.py ................................... PASSED</text>
+  <text x="52" y="514" font-family="Consolas, 'Courier New', monospace" font-size="28" font-weight="bold" fill="#3fb950">============================ 123 passed in 16.66s ============================</text>
+  <text x="52" y="570" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#8b949e">Recorded from the Week 8 integration rerun on October 7, 2026. Shown test rows are representative; the reported count covers the complete suite.</text>
+</svg>
