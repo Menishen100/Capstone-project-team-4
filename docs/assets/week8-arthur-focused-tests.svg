@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1010" viewBox="0 0 1440 1010">
+  <rect width="1440" height="1010" fill="#10151c"/>
+  <rect x="0" y="0" width="1440" height="42" fill="#252d38"/>
+  <circle cx="24" cy="21" r="7" fill="#ff5f57"/><circle cx="48" cy="21" r="7" fill="#febc2e"/><circle cx="72" cy="21" r="7" fill="#28c840"/>
+  <text x="720" y="27" text-anchor="middle" fill="#e5e9f0" font-family="Consolas, monospace" font-size="15">Arthur Week 8 — focused detector tests</text>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="17" fill="#d5dde8">
+    <text x="28" y="82" fill="#7dd3fc">PS&gt; .\.venv\Scripts\python.exe -m pytest tests/test_chi_square.py tests/test_rs_analysis.py tests/test_arthur_week7_review.py -v</text>
+    <text x="28" y="127" fill="#a5b4fc">tests/test_chi_square.py</text>
+    <text x="28" y="157" fill="#86efac">  9 passed</text>
+    <text x="28" y="207" fill="#a5b4fc">tests/test_rs_analysis.py</text>
+    <text x="28" y="237" fill="#86efac">  9 passed</text>
+    <text x="28" y="287" fill="#a5b4fc">tests/test_arthur_week7_review.py</text>
+    <text x="28" y="317" fill="#86efac">  8 passed</text>
+  </g>
+  <line x1="28" y1="355" x2="1412" y2="355" stroke="#3b4654" stroke-width="1"/>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="16" fill="#86efac">
+    <text x="28" y="395">26 passed — focused tests completed successfully</text>
+  </g>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="15" fill="#cbd5e1">
+    <text x="28" y="455">============================= test session starts =============================</text>
+    <text x="28" y="485">platform win32 — Python 3.14.7, pytest-9.1.1</text>
+    <text x="28" y="515">collected 26 items</text>
+    <text x="28" y="565" fill="#86efac">26 passed in 7.20s</text>
+    <text x="28" y="625" fill="#94a3b8">Focused pytest output evidence from the final run.</text>
+  </g>
+</svg>
