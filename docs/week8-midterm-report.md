@@ -110,6 +110,14 @@ documents focused DH, LSB, and development-review coverage. The demo checklist
 uses the full suite as the final integration check, which should be rerun in
 the current environment before the demonstration.
 
+Menishen's integrated rerun completed with **123 passed in 16.66 seconds** on
+October 7, 2026. The terminal-style evidence asset records the command and
+result without claiming that the test count is a final project metric.
+
+![Menishen Week 8 integrated full-suite evidence](assets/week8-progress/menishen-full-suite-evidence.svg)
+
+*Menishen Week 8 — integrated automated-test evidence for the midterm package.*
+
 ## Development-set preliminary results
 
 The preliminary runner completed 120 development rows: 60 clean and 60
