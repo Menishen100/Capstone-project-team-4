@@ -48,7 +48,8 @@
 
 ### Next meeting
 
-- **Date and time:** To be scheduled.
+- **Date and time:** October 12 and October 14, 2026
+Time: 8:30 PM to 9:30 PM EST
 - **Focus:** Begin Week 9 work from the approved plan: implement the
   weighted-voting ensemble and a reproducible equal-weight baseline. The team
   will use the existing detector outputs and will not use the held-out test
