@@ -26,3 +26,8 @@ def normalize_chi_square(score: Real) -> float:
 def normalize_rs(score: Real) -> float:
     """Invert the bounded RS score so higher values mean more suspicious."""
     return 1.0 - _validate_score(score)
+
+
+def normalize_dh(score: Real) -> float:
+    """Invert the bounded DH score so higher values mean more suspicious."""
+    return 1.0 - _validate_score(score)
