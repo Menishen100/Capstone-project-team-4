@@ -1,3 +1,4 @@
+import csv
 from pathlib import Path
 import numpy as np
 from PIL import Image
@@ -8,6 +9,7 @@ from src.detectors.difference_histogram import(
 
 CLEAN_DIR = Path("dataset/clean")
 STEGO_DIR = Path("dataset/stego")
+METADATA_PATH = Path("data/metadata.csv")
 
 def test_real_dataset_images_run_through_detector():
     detector = DifferenceHistogramDetector()
@@ -40,18 +42,16 @@ def test_real_dataset_images_run_through_detector():
 
 
 def test_real_clean_dataset_modes():
+    """Each clean image must match its recorded metadata mode, not its number."""
+    with METADATA_PATH.open(newline="", encoding="utf-8") as handle:
+        metadata_rows = list(csv.DictReader(handle))
 
-    for number in range(1, 101):
-        image_path = CLEAN_DIR / (
-            f"pair_{number:03d}_clean.png"
-        )
+    assert len(metadata_rows) == 100
+    for row in metadata_rows:
+        image_path = CLEAN_DIR / row["clean_filename"]
 
         with Image.open(image_path) as image:
-            if number <= 50:
-                assert image.mode == "RGB"
-
-            else:
-                assert image.mode == "L"
+            assert image.mode == row["color_mode"]
 
 
 def test_clean_and_stego_modes_match():
