@@ -12,3 +12,4 @@ Meeting minutes are organized by the project week and aligned with the approved 
 - [Week 6 meeting minutes](minutes/week6_meeting_minutes.md) - Meeting 10: diagnostic/test expansion and preliminary development-set scoring.
 - [Week 7 meeting minutes](minutes/week7_meeting_minutes.md) - Meeting 11: score review, candidate-case analysis, and preprocessing decisions.
 - [Week 8 meeting minutes](minutes/week8_meeting_minutes.md) - Meeting 12: midterm evidence package, dataset/detector proof, and demo preparation.
+- [Week 9 meeting minutes](minutes/week9_meeting_minutes.md) - Meeting 13: scheduled ensemble-baseline review and Week 10 calibration preparation.
