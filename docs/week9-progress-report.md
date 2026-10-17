@@ -81,10 +81,11 @@ The combined focused Week 9 verification command was:
 .venv\Scripts\python.exe -m pytest tests/test_ensemble_normalization.py tests/test_ensemble_input_validation.py tests/test_ensemble_voting.py -v
 ```
 
-![Week 9 score-direction and voting evidence](assets/week9-progress/week9-score-direction.png)
+![Menishen's Week 9 ensemble-voting test evidence](assets/week9-progress/menishen-ensemble-voting-tests.svg)
 
-*Figure 3. Week 9 score-direction verification evidence. The voting module is
-tested alongside the validated normalized inputs.*
+*Figure 3. Menishen's Week 9 ensemble-voting test evidence. The focused test
+run verifies the equal-weight baseline calculation, label threshold, custom
+configuration behavior, input validation, and explanatory diagnostics.*
 
 ### 2.3 Dataset metadata integrity correction — Afriyie Menishen
 
