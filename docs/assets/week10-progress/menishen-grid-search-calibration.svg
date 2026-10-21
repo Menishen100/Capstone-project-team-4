@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="930" viewBox="0 0 1600 930" role="img" aria-labelledby="title description">
+  <title id="title">Menishen Week 10 grid-search calibration evidence</title>
+  <desc id="description">Terminal-style output for the completed development and validation ensemble calibration grid search.</desc>
+  <rect width="1600" height="930" fill="#101418"/>
+  <rect width="1600" height="52" fill="#1d252c"/>
+  <circle cx="28" cy="26" r="8" fill="#ff5f57"/><circle cx="54" cy="26" r="8" fill="#febc2e"/><circle cx="80" cy="26" r="8" fill="#28c840"/>
+  <style>.t { font-family: Consolas, 'Courier New', monospace; font-size: 24px; fill: #e6edf3; }.m { fill: #b7c0c8; }.g { fill: #40d879; }.y { fill: #f2d84b; }</style>
+  <text class="t" x="34" y="100"><tspan class="g">(.venv)</tspan><tspan> PS C:\Users\afriy\OneDrive\Documents\ChatGPT\CapstoneProject&gt; </tspan><tspan class="y">.\.venv\Scripts\python.exe -m src.evaluation.grid_search_ensemble</tspan></text>
+  <text class="t m" x="34" y="158">Week 10 Ensemble Calibration Complete</text>
+  <text class="t m" x="34" y="202">Selection metric: validation F1 (then recall, precision, accuracy)</text>
+  <text class="t" x="34" y="266">Selected weights: <tspan class="g">Chi-square=0.00, RS=0.70, DH=0.30</tspan></text>
+  <text class="t" x="34" y="310">Selected threshold: <tspan class="g">0.70</tspan></text>
+  <text class="t" x="34" y="374">Validation accuracy: <tspan class="g">0.7500</tspan></text>
+  <text class="t" x="34" y="418">Validation precision: <tspan class="g">0.7273</tspan></text>
+  <text class="t" x="34" y="462">Validation recall: <tspan class="g">0.8000</tspan></text>
+  <text class="t" x="34" y="506">Validation F1: <tspan class="g">0.7619</tspan></text>
+  <text class="t" x="34" y="570">Calibration rows: development=120, validation=40</text>
+  <text class="t" x="34" y="614">Held-out test rows used: <tspan class="g">0</tspan></text>
+  <text class="t" x="34" y="658">Results CSV: data\week10_grid_search_results.csv (594 candidates)</text>
+  <rect x="28" y="720" width="1544" height="140" rx="10" fill="#172c22" stroke="#40d879" stroke-width="2"/>
+  <text class="t g" x="58" y="774">Menishen Week 10 – Ensemble grid-search calibration and selected validation configuration.</text>
+  <text class="t m" x="58" y="822">Grid: 66 normalized weight triples × 9 thresholds. Selection uses validation F1 only.</text>
+</svg>
