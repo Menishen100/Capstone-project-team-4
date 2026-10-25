@@ -140,4 +140,4 @@ final evaluation stage.
 - [Menishen's Week 9 ensemble baseline](../week9-menishen-ensemble-baseline.md)
 - [Arthur's Week 9 score-direction documentation](../week9-arthur-score-direction.md)
 - [Exzavier's Week 9 DH score-direction documentation](../week9-dh-score-direction.md)
-- [Week 9 meeting minutes](../../minutes/week9_meeting_minutes.md)
+- [Week 9 meeting minutes](../../minutes/week09_meeting_minutes.md)
