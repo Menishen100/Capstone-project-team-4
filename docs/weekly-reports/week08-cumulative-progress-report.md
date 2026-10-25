@@ -46,12 +46,12 @@ Tests verify RGB and grayscale preservation, unsupported-mode conversion,
 missing-file handling, the common result structure, score bounds, diagnostics,
 and that all three detectors leave their input arrays unchanged.
 
-![Week 3 RGB preprocessing evidence](assets/week3-progress/rgb-input-validation.png)
+![Week 3 RGB preprocessing evidence](../assets/week3-progress/rgb-input-validation.png)
 
 *Figure 1. Week 3 RGB preprocessing evidence: the input remains an RGB
 `uint8` NumPy array.*
 
-![Week 4 cross-detector integration evidence](assets/week4-progress/detector-integration-tests.png)
+![Week 4 cross-detector integration evidence](../assets/week4-progress/detector-integration-tests.png)
 
 *Figure 2. Week 4 integration test evidence: Chi-square, RS, and DH pass the
 same output-contract checks for grayscale and RGB inputs.*
@@ -72,7 +72,7 @@ Arthur's Week 8 focused command covering Chi-square, RS, and the Week 7 review
 safeguards completed with 26 passing tests; the component evidence also records
 the full-suite result available at that time.
 
-![Arthur Week 8 Chi-square and RS test evidence](assets/week8-arthur-focused-tests.png)
+![Arthur Week 8 Chi-square and RS test evidence](../assets/week8-arthur-focused-tests.png)
 
 *Figure 3. Arthur's focused Week 8 test run for Chi-square, RS, and
 development-review safeguards.*
@@ -92,7 +92,7 @@ differences, central-radius validation, grayscale and RGB handling, supported
 and invalid image modes, invalid data and shapes, bounded scores, repeatable
 results, input protection, and real dataset images.
 
-![Difference Histogram test evidence](assets/week4-progress/difference-histogram-unit-tests.png)
+![Difference Histogram test evidence](../assets/week4-progress/difference-histogram-unit-tests.png)
 
 *Figure 4. Early DH unit-test evidence showing correct histogram behavior and
 edge-case coverage; later tests expanded this coverage.*
@@ -119,11 +119,11 @@ clean folder. Dataset workflow tests verify complete metadata, exact 100-pair
 and 60/20/20 targets, reproducibility, invalid mapping rejection, source
 inventory requirements, and split-assignment validation.
 
-![LSB embedder test evidence](assets/week5-progress/lsb-embedder-unit-tests.png)
+![LSB embedder test evidence](../assets/week5-progress/lsb-embedder-unit-tests.png)
 
 *Figure 5. Week 5 LSB embedder unit-test evidence.*
 
-![Paired dataset generation evidence](assets/week5-progress/menishen-paired-dataset-tests.svg)
+![Paired dataset generation evidence](../assets/week5-progress/menishen-paired-dataset-tests.svg)
 
 *Figure 6. Menishen's Week 5 paired-dataset generation and metadata test
 evidence.*
@@ -145,7 +145,7 @@ detector execution errors. The Week 6 defect list therefore records no observed
 execution defect and tracks uncalibrated score interpretation as a planned
 limitation rather than a defect.
 
-![Development scoring evidence](assets/week6-progress/menishen-development-scoring.svg)
+![Development scoring evidence](../assets/week6-progress/menishen-development-scoring.svg)
 
 *Figure 7. Week 6 development-set scoring evidence for the three-detector
 runner.*
@@ -170,12 +170,12 @@ invalid score bounds, mismatched source identifiers, malformed diagnostics,
 and histogram-total mismatches. They also verify descriptive summaries and
 candidate-case reporting.
 
-![Arthur Week 7 detector-review evidence](assets/week7-progress/arthur-chi-rs-review-tests.png)
+![Arthur Week 7 detector-review evidence](../assets/week7-progress/arthur-chi-rs-review-tests.png)
 
 *Figure 8. Week 7 Chi-square/RS review tests passing on the
 development-only review workflow.*
 
-![Exzavier Week 7 DH review evidence](assets/week7-progress/exzavier-dh-review-tests.png)
+![Exzavier Week 7 DH review evidence](../assets/week7-progress/exzavier-dh-review-tests.png)
 
 *Figure 9. Week 7 DH review tests passing.*
 
@@ -197,7 +197,7 @@ full automated suite with **123 passing tests in 16.66 seconds**. This is
 evidence that the current prototype components work together; it is not a
 claim of final detection accuracy.
 
-![Menishen Week 8 integrated test evidence](assets/week8-progress/menishen-full-suite-evidence.svg)
+![Menishen Week 8 integrated test evidence](../assets/week8-progress/menishen-full-suite-evidence.svg)
 
 *Figure 10. Menishen's Week 8 integrated test-evidence summary showing the
 full-suite command and successful result.*
@@ -257,11 +257,11 @@ the held-out test set untouched.
 
 ## 7. Evidence and supporting documents
 
-- [Approved project plan](../project-plan.md)
-- [Week 8 midterm evidence package](week8-midterm-report.md)
-- [Week 8 demo checklist](week8-demo-checklist.md)
-- [Arthur's Week 8 detector evidence](week8-arthur-detector-evidence.md)
-- [Exzavier's Week 8 DH/LSB/dataset evidence](week8-dataset-dh-evidence.md)
-- [Week 6 development score summary](week6-development-score-summary.md)
-- [Week 6 defect list](week6-defect-list.md)
-- [Week 7 preliminary validation summary](week7-preliminary-validation-summary.md)
+- [Approved project plan](../../project-plan.md)
+- [Week 8 midterm evidence package](../week8-midterm-report.md)
+- [Week 8 demo checklist](../week8-demo-checklist.md)
+- [Arthur's Week 8 detector evidence](../week8-arthur-detector-evidence.md)
+- [Exzavier's Week 8 DH/LSB/dataset evidence](../week8-dataset-dh-evidence.md)
+- [Week 6 development score summary](../week6-development-score-summary.md)
+- [Week 6 defect list](../week6-defect-list.md)
+- [Week 7 preliminary validation summary](../week7-preliminary-validation-summary.md)

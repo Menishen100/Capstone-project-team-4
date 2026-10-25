@@ -20,7 +20,7 @@ development run, so score direction and calibration remain later
 validation-based decisions rather than Week 7 claims.
 
 The final preliminary validation summary is in
-[`docs/week7-preliminary-validation-summary.md`](week7-preliminary-validation-summary.md).
+[`docs/week7-preliminary-validation-summary.md`](../week7-preliminary-validation-summary.md).
 
 ## 2. Subtasks completed
 
@@ -41,7 +41,7 @@ final classification errors because no threshold was selected.
 
 **Result:** PASS — 8 focused Arthur Week 7 review tests completed.
 
-![Arthur Week 7 — Chi-square and RS review plus tests](assets/week7-progress/arthur-chi-rs-review-tests.png)
+![Arthur Week 7 — Chi-square and RS review plus tests](../assets/week7-progress/arthur-chi-rs-review-tests.png)
 
 ### 2.2 Exzavier — Difference Histogram review tests
 
@@ -54,7 +54,7 @@ candidate stego range-extreme cases.
 
 **Result:** PASS — 7 focused Difference Histogram review tests completed.
 
-![Exzavier Week 7 — Difference Histogram review tests](assets/week7-progress/exzavier-dh-review-tests.png)
+![Exzavier Week 7 — Difference Histogram review tests](../assets/week7-progress/exzavier-dh-review-tests.png)
 
 ### 2.3 Menishen — combined validation summary tests
 
@@ -73,7 +73,7 @@ sections. The generated summary records the following descriptive results:
 suite passed **123 tests** after all Week 7 review tests were made
 pytest-discoverable.
 
-![Menishen Week 7 — preliminary validation summary](assets/week7-progress/menishen-preliminary-validation-summary.svg)
+![Menishen Week 7 — preliminary validation summary](../assets/week7-progress/menishen-preliminary-validation-summary.svg)
 
 ## 3. Lessons learned
 

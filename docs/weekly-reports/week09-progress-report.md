@@ -41,7 +41,7 @@ Arthur's focused tests cover endpoints, intermediate values, deterministic
 behavior, range preservation, intended direction, and rejection of negative,
 above-one, boolean, nonnumeric, `NaN`, and infinite values.
 
-![Arthur's Week 9 score-direction test evidence](assets/week9-progress/arthur-normalization-tests.png)
+![Arthur's Week 9 score-direction test evidence](../assets/week9-progress/arthur-normalization-tests.png)
 
 *Figure 1. Arthur's focused Chi-square, RS, and normalization tests pass.*
 
@@ -51,7 +51,7 @@ missing required columns or scores, invalid labels/statuses, out-of-range,
 nonnumeric, `NaN`, and infinite values; they also confirm that validation and
 held-out rows are excluded from this development-input check.
 
-![Exzavier's Week 9 ensemble-input validation evidence](assets/week9-progress/week9_ensemble_inputs_testing.png)
+![Exzavier's Week 9 ensemble-input validation evidence](../assets/week9-progress/week9_ensemble_inputs_testing.png)
 
 *Figure 2. Exzavier's focused development-score input-validation tests pass.*
 
@@ -81,7 +81,7 @@ The combined focused Week 9 verification command was:
 .venv\Scripts\python.exe -m pytest tests/test_ensemble_normalization.py tests/test_ensemble_input_validation.py tests/test_ensemble_voting.py -v
 ```
 
-![Menishen's Week 9 ensemble-voting test evidence](assets/week9-progress/menishen-ensemble-voting-tests.svg)
+![Menishen's Week 9 ensemble-voting test evidence](../assets/week9-progress/menishen-ensemble-voting-tests.svg)
 
 *Figure 3. Menishen's Week 9 ensemble-voting test evidence. The focused test
 run verifies the equal-weight baseline calculation, label threshold, custom
@@ -136,8 +136,8 @@ final evaluation stage.
 
 ## 6. Supporting evidence
 
-- [Approved project plan](../project-plan.md)
-- [Menishen's Week 9 ensemble baseline](week9-menishen-ensemble-baseline.md)
-- [Arthur's Week 9 score-direction documentation](week9-arthur-score-direction.md)
-- [Exzavier's Week 9 DH score-direction documentation](week9-dh-score-direction.md)
-- [Week 9 meeting minutes](../minutes/week9_meeting_minutes.md)
+- [Approved project plan](../../project-plan.md)
+- [Menishen's Week 9 ensemble baseline](../week9-menishen-ensemble-baseline.md)
+- [Arthur's Week 9 score-direction documentation](../week9-arthur-score-direction.md)
+- [Exzavier's Week 9 DH score-direction documentation](../week9-dh-score-direction.md)
+- [Week 9 meeting minutes](../../minutes/week9_meeting_minutes.md)

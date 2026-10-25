@@ -19,9 +19,9 @@ Histogram detectors. The run used only `split=development`; it did not read
 the validation or held-out-test subsets.
 
 The resulting artifacts are
-[`data/development_detector_scores.csv`](../data/development_detector_scores.csv),
-[`docs/week6-development-score-summary.md`](week6-development-score-summary.md),
-and [`docs/week6-defect-list.md`](week6-defect-list.md).
+[`data/development_detector_scores.csv`](../../data/development_detector_scores.csv),
+[`docs/week6-development-score-summary.md`](../week6-development-score-summary.md),
+and [`docs/week6-defect-list.md`](../week6-defect-list.md).
 
 ## 2. Subtasks completed
 
@@ -44,7 +44,7 @@ sum to `groups_analyzed`.
 **Result:** PASS — 18 Chi-square and RS tests completed in the supplied
 terminal evidence.
 
-![Arthur Week 6 — Chi-square and RS diagnostic/unit tests](assets/week6-progress/arthur-chi-square-rs-tests.png)
+![Arthur Week 6 — Chi-square and RS diagnostic/unit tests](../assets/week6-progress/arthur-chi-square-rs-tests.png)
 
 ### 2.2 Exzavier — Difference Histogram tests
 
@@ -59,14 +59,14 @@ clean/stego modes match.
 terminal output contains a pytest cache warning caused by the local Windows
 cache path; it did not affect the test result.
 
-![Exzavier Week 6 — Difference Histogram diagnostic and unit tests](assets/week6-progress/exzavier-dh-unit-tests.png)
+![Exzavier Week 6 — Difference Histogram diagnostic and unit tests](../assets/week6-progress/exzavier-dh-unit-tests.png)
 
 The supplied dataset-focused run separately passed four checks: all 100 clean
 and 100 stego images analyze successfully, the expected clean modes are
 present, each clean/stego pair has matching modes, and channel histogram totals
 are correct.
 
-![Exzavier Week 6 — Difference Histogram real-dataset checks](assets/week6-progress/exzavier-dh-dataset-tests.png)
+![Exzavier Week 6 — Difference Histogram real-dataset checks](../assets/week6-progress/exzavier-dh-dataset-tests.png)
 
 ### 2.3 Menishen — development-set scoring, score table, and defect list
 
@@ -82,7 +82,7 @@ summary reports descriptive means, medians, and ranges only; it makes no
 threshold, ranking, or calibration decision. The defect list records no
 execution defects and tracks score calibration as a planned Week 7 limitation.
 
-![Menishen Week 6 — preliminary development-set scoring](assets/week6-progress/menishen-development-scoring.svg)
+![Menishen Week 6 — preliminary development-set scoring](../assets/week6-progress/menishen-development-scoring.svg)
 
 ## 3. Lessons learned
 
