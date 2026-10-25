@@ -45,7 +45,7 @@ structure or pixel representation.
 
 **Result:** PASS.
 
-![RGB input validation output](assets/week3-progress/rgb-input-validation.png)
+![RGB input validation output](../assets/week3-progress/rgb-input-validation.png)
 
 *Figure 1. RGB input validation output showing PNG, RGB mode, `(256, 256, 3)`
 array shape, and `uint8` data type.*
@@ -60,7 +60,7 @@ and `uint8` data type.
 
 **Result:** PASS.
 
-![Grayscale input validation output](assets/week3-progress/grayscale-input-validation.jpeg)
+![Grayscale input validation output](../assets/week3-progress/grayscale-input-validation.jpeg)
 
 *Figure 2. Grayscale input validation output showing `L` mode and a
 two-dimensional `(256, 256)` `uint8` array.*
@@ -75,7 +75,7 @@ required by the common detector interface.
 
 **Result:** PASS.
 
-![Chi-square prototype test](assets/week3-progress/chi-square-prototype-test.png)
+![Chi-square prototype test](../assets/week3-progress/chi-square-prototype-test.png)
 
 *Figure 3. Arthur's Chi-square prototype and its passing pytest output.*
 

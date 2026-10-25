@@ -46,7 +46,7 @@ positive-class metric calculation, one selected result, held-out-row rejection,
 CSV output structure, and completion output. The generated evidence below
 records 120 development rows, 40 validation rows, and zero held-out rows.
 
-![Menishen's Week 10 grid-search calibration evidence](assets/week10-progress/menishen-grid-search-calibration.svg)
+![Menishen's Week 10 grid-search calibration evidence](../assets/week10-progress/menishen-grid-search-calibration.svg)
 
 *Figure 1. Menishen's calibration run selects the validation-only
 configuration and records the search size and protected held-out count.*
@@ -66,7 +66,7 @@ behavior, RS direction handling, invalid weights, selected-row membership, and
 held-out split rejection. This is an independent safeguard for the calibration
 workflow; it does not run a competing search or alter detector algorithms.
 
-![Arthur's Week 10 calibration-verification test evidence](assets/week10-progress/arthur-calibration-tests.png)
+![Arthur's Week 10 calibration-verification test evidence](../assets/week10-progress/arthur-calibration-tests.png)
 
 *Figure 2. Arthur's focused calibration-verification tests pass, including
 validation-only and selected-configuration safeguards.*
@@ -89,7 +89,7 @@ selected-weight filtering and threshold ordering, image creation for all three
 plots, and validation-only baseline metrics. Development and held-out records
 are excluded from the baseline comparison.
 
-![Exzavier's Week 10 validation-plot test evidence](assets/week10-progress/week10-validation-plot-tests.png)
+![Exzavier's Week 10 validation-plot test evidence](../assets/week10-progress/week10-validation-plot-tests.png)
 
 *Figure 3. Exzavier's focused validation-plot tests pass. The plots support the
 already selected validation configuration without re-tuning it.*
@@ -143,8 +143,8 @@ configuration will be evaluated once on the protected held-out test split.
 
 ## 6. Supporting evidence
 
-- [Approved project plan](../project-plan.md)
-- [Menishen's Week 10 calibration results](week10-calibration-results.md)
-- [Arthur's Week 10 calibration verification](week10-arthur-calibration-verification.md)
-- [Exzavier's Week 10 validation plots](week10-validation-plots.md)
-- [Complete Week 10 grid-search results](../data/week10_grid_search_results.csv)
+- [Approved project plan](../../project-plan.md)
+- [Menishen's Week 10 calibration results](../week10-calibration-results.md)
+- [Arthur's Week 10 calibration verification](../week10-arthur-calibration-verification.md)
+- [Exzavier's Week 10 validation plots](../week10-validation-plots.md)
+- [Complete Week 10 grid-search results](../../data/week10_grid_search_results.csv)

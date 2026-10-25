@@ -33,7 +33,7 @@ The workflow is designed for the approved project-plan split: 60 development pai
 
 **Result:** PASS — 21 collected tests completed successfully.
 
-![LSB embedder unit tests](assets/week5-progress/lsb-embedder-unit-tests.png)
+![LSB embedder unit tests](../assets/week5-progress/lsb-embedder-unit-tests.png)
 
 *Figure 1. Exzavier's LSB embedder pytest run showing all 21 collected cases passing.*
 
@@ -57,11 +57,11 @@ The workflow is designed for the approved project-plan split: 60 development pai
 
 **Result:** PASS — the earlier supplied run reported 19 passing tests; the current report-time run reported 64 passing tests in 7.81 seconds after the Week 5 modules were merged.
 
-![Repository setup and pytest run](assets/week5-progress/full-pytest-suite.png)
+![Repository setup and pytest run](../assets/week5-progress/full-pytest-suite.png)
 
 *Figure 2. Supplied terminal evidence showing the corrected repository directory, dependency check, and a successful pytest run.*
 
-![Menishen paired-dataset tests](assets/week5-progress/menishen-paired-dataset-tests.svg)
+![Menishen paired-dataset tests](../assets/week5-progress/menishen-paired-dataset-tests.svg)
 
 *Figure 3. Menishen's current paired-dataset pytest evidence. All six generation, pairing, split-allocation, reproducibility, and invalid-inventory cases passed.*
 

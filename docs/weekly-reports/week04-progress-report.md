@@ -36,7 +36,7 @@ Menishen completed the Week 4 integration review. The shared detector convention
 
 **Result:** PASS - 15 tests passed.
 
-![Difference Histogram unit tests](assets/week4-progress/difference-histogram-unit-tests.png)
+![Difference Histogram unit tests](../assets/week4-progress/difference-histogram-unit-tests.png)
 
 *Figure 1. Exzavier's Difference Histogram pytest run showing 15 passing tests.*
 
@@ -50,7 +50,7 @@ Menishen completed the Week 4 integration review. The shared detector convention
 
 **Result:** PASS - 5 tests passed.
 
-![RS Analysis unit tests](assets/week4-progress/rs-analysis-unit-tests.png)
+![RS Analysis unit tests](../assets/week4-progress/rs-analysis-unit-tests.png)
 
 *Figure 2. Arthur's successful RS Analysis pytest run showing 5 passing tests.*
 
@@ -64,7 +64,7 @@ Menishen completed the Week 4 integration review. The shared detector convention
 
 **Result:** PASS - 2 tests passed.
 
-![Cross detector integration test](assets/week4-progress/detector-integration-tests.png)
+![Cross detector integration test](../assets/week4-progress/detector-integration-tests.png)
 
 *Figure 3. Menishen's cross detector compatibility test showing passing grayscale and RGB cases.*
 
