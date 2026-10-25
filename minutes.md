@@ -13,3 +13,4 @@ Meeting minutes are organized by the project week and aligned with the approved 
 - [Week 7 meeting minutes](minutes/week7_meeting_minutes.md) - Meeting 11: score review, candidate-case analysis, and preprocessing decisions.
 - [Week 8 meeting minutes](minutes/week8_meeting_minutes.md) - Meeting 12: midterm evidence package, dataset/detector proof, and demo preparation.
 - [Week 9 meeting minutes](minutes/week9_meeting_minutes.md) - Meeting 13: scheduled ensemble-baseline review and Week 10 calibration preparation.
+- [Week 10 meeting minutes](minutes/week10_meeting_minutes.md) - Meeting 14: validation-based ensemble calibration, selected configuration verification, and Week 11 held-out evaluation preparation.
