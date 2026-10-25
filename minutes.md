@@ -4,13 +4,13 @@
 
 Meeting minutes are organized by the project week and aligned with the approved project plan.
 
-- [Week 1 meeting minutes](minutes/week1_meeting_minutes.md) - Meetings 1 and 2: team setup before the approved project-plan timeline.
-- [Week 2 meeting minutes](minutes/week2_meeting_minutes.md) - Meetings 3 and 4: project scope, repository, roles, and plan approval activities.
-- [Week 3 meeting minutes](minutes/week3_meeting_minutes.md) - Meetings 5 through 7: common detector interface, preprocessing, and Chi square prototype activities.
-- [Week 4 meeting minutes](minutes/week4_meeting_minutes.md) - Meeting 8: RS and Difference Histogram prototypes, output-convention review, and integration testing.
-- [Week 5 meeting minutes](minutes/week5_meeting_minutes.md) - Meeting 9: LSB embedding, clean-source validation, paired dataset generation, and metadata integrity review.
-- [Week 6 meeting minutes](minutes/week6_meeting_minutes.md) - Meeting 10: diagnostic/test expansion and preliminary development-set scoring.
-- [Week 7 meeting minutes](minutes/week7_meeting_minutes.md) - Meeting 11: score review, candidate-case analysis, and preprocessing decisions.
-- [Week 8 meeting minutes](minutes/week8_meeting_minutes.md) - Meeting 12: midterm evidence package, dataset/detector proof, and demo preparation.
-- [Week 9 meeting minutes](minutes/week9_meeting_minutes.md) - Meeting 13: scheduled ensemble-baseline review and Week 10 calibration preparation.
+- [Week 1 meeting minutes](minutes/week01_meeting_minutes.md) - Meetings 1 and 2: team setup before the approved project-plan timeline.
+- [Week 2 meeting minutes](minutes/week02_meeting_minutes.md) - Meetings 3 and 4: project scope, repository, roles, and plan approval activities.
+- [Week 3 meeting minutes](minutes/week03_meeting_minutes.md) - Meetings 5 through 7: common detector interface, preprocessing, and Chi square prototype activities.
+- [Week 4 meeting minutes](minutes/week04_meeting_minutes.md) - Meeting 8: RS and Difference Histogram prototypes, output-convention review, and integration testing.
+- [Week 5 meeting minutes](minutes/week05_meeting_minutes.md) - Meeting 9: LSB embedding, clean-source validation, paired dataset generation, and metadata integrity review.
+- [Week 6 meeting minutes](minutes/week06_meeting_minutes.md) - Meeting 10: diagnostic/test expansion and preliminary development-set scoring.
+- [Week 7 meeting minutes](minutes/week07_meeting_minutes.md) - Meeting 11: score review, candidate-case analysis, and preprocessing decisions.
+- [Week 8 meeting minutes](minutes/week08_meeting_minutes.md) - Meeting 12: midterm evidence package, dataset/detector proof, and demo preparation.
+- [Week 9 meeting minutes](minutes/week09_meeting_minutes.md) - Meeting 13: scheduled ensemble-baseline review and Week 10 calibration preparation.
 - [Week 10 meeting minutes](minutes/week10_meeting_minutes.md) - Meeting 14: validation-based ensemble calibration, selected configuration verification, and Week 11 held-out evaluation preparation.
