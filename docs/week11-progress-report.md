@@ -2,96 +2,103 @@
 
 ## Milestones
 
-The project plan schedules Week 11 for a one-time held-out evaluation with
-metrics, ROC/AUC, and confusion-matrix results. The Week 10 configuration is
-locked at Chi-square 0.00, RS 0.70, DH 0.30, and threshold 0.70.
+The team completed the planned Week 11 held-out evaluation, metric verification,
+ROC/AUC plots, and confusion-matrix plot. The Week 10 configuration remained
+locked at Chi-square 0.00, RS 0.70, DH 0.30, and threshold 0.70. Results were
+reported as observed without retuning.
 
-Arthur's independent metric-verification component is implemented and its
-focused tests pass. The full team milestone is **partially achieved** in this
-checkout: Menishen's official prediction/metrics files and Exzavier's held-out
-plots are not present here, so final held-out results and visualizations cannot
-yet be verified or reported. This status describes the shared project
-workspace available for this report; it does not establish whether teammates
-have work in another checkout.
+The official prediction file contains 40 rows (20 clean and 20 stego). Final
+metrics are accuracy 0.6250, precision 0.6923, recall 0.4500, and F1 0.5455;
+confusion counts are TP 9, TN 16, FP 4, and FN 11. Exzavier's ROC analysis
+reports AUC 0.5475 for Chi-square, 0.6850 for RS, 0.5875 for DH, and 0.6675 for
+the ensemble.
 
 ## Subtasks completed and test evidence
 
-### Arthur — independent held-out metrics and confusion-matrix verification
+### Arthur — independent metric and confusion-matrix verification
 
 Implemented `src/evaluation/heldout_metrics.py` to consume the official
-prediction CSV and metrics JSON, without loading images or rerunning detectors.
-The verifier checks exactly 20 unique held-out sources and 40 image rows, one
-clean and one stego row per source, labels and predictions, locked weights and
-threshold, ensemble arithmetic and predictions using the repository's existing
-metric/voting helpers, and recomputed accuracy, precision, recall, F1, TP, TN,
-FP, and FN. It rejects result rows whose source IDs do not match held-out
-metadata.
+prediction CSV and metrics JSON without loading images or rerunning detectors.
+It checks exactly 20 unique held-out sources and 40 rows, the correct
+clean/stego filenames for each paired source, the locked configuration, each
+row's Week 9 normalized values and voting output, and recomputed accuracy,
+precision, recall, F1, TP, TN, FP, and FN against the official summary.
 
-Added six focused tests in `tests/test_heldout_metrics.py`:
+The six focused tests cover:
 
-1. A hand-calculated case confirms TP=1, TN=1, FP=1, FN=1 and accuracy,
-   precision, recall, and F1 all equal 0.5.
-2. A 40-row synthetic fixture checks the expected 20/20 class balance, locked
-   configuration, ensemble-score/prediction parity, metric values, and
-   confusion counts.
-3. A row from outside the held-out source set is rejected.
-4. A changed threshold is rejected.
-5. A changed ensemble score is rejected.
-6. An incorrect reported confusion-matrix count is rejected.
+1. A hand-calculated example with TP=1, TN=1, FP=1, FN=1 and accuracy,
+   precision, recall, and F1 all equal to 0.5.
+2. A 40-row synthetic fixture with 20 clean and 20 stego images, one per label
+   for each source, checking locked weights, ensemble-score and prediction
+   parity, metrics, and confusion counts.
+3. Rejection of a source ID outside the held-out set.
+4. Rejection of a changed threshold.
+5. Rejection of an incorrect ensemble score.
+6. Rejection of an incorrect confusion-matrix count.
 
-Command: `python -m pytest tests/test_heldout_metrics.py -q`  
-Result: **6 passed**. This is a synthetic unit-test fixture, not the official
-held-out evaluation. The evidence image is included below.
+`python -m pytest tests/test_heldout_metrics.py -q`: **6 passed**.
+`python -m src.evaluation.heldout_metrics`: **passed** against the official
+results. It independently reproduced TP=9, TN=16, FP=4, FN=11, accuracy
+0.6250, precision 0.6923, recall 0.4500, and F1 0.5455. Confusion counts sum
+to 40. The screenshot below records the focused test run; the full verification
+output is documented in
+[`week11-arthur-heldout-verification.md`](week11-arthur-heldout-verification.md).
 
 ![Arthur Week 11 held-out verification tests passing](assets/week11-progress/arthur-heldout-verification-tests.png)
 
-Documentation and a repeatable evidence-capture script were added. The
-verification command is documented in
-[`week11-arthur-heldout-verification.md`](week11-arthur-heldout-verification.md).
-
 ### Menishen — official held-out evaluation
 
-The assigned task is to run the locked configuration once and provide the
-official per-image predictions and summary metrics. Those artifacts are not
-present in this checkout, so the official run and its result cannot be
-confirmed in this report.
+Menishen supplied `src/evaluation/run_heldout_evaluation.py`, the official
+prediction CSV, and metrics JSON. The evaluation documentation reports 34
+focused locked-configuration/evaluation tests and 226 full-suite tests passing.
+Documented checks include held-out-only inputs, paired source counts, required
+prediction fields, metrics and confusion calculations, and refusal to
+overwrite official output paths. See
+[`week11-heldout-evaluation.md`](week11-heldout-evaluation.md) and its embedded
+terminal evidence screenshot.
 
-### Exzavier — held-out plots
+### Exzavier — held-out ROC/AUC and confusion-matrix plots
 
-The assigned task is to create ensemble and detector ROC/AUC comparisons and a
-confusion-matrix plot from the official held-out results. Those plot artifacts
-are not present in this checkout, so plot completion cannot be confirmed here.
+Exzavier supplied `src/evaluation/plot_heldout_results.py`, the ensemble ROC,
+detector comparison ROC, confusion-matrix plot, and plot documentation. The
+documented tests cover held-out-only inputs, label mapping, AUC bounds,
+confusion-matrix positions and totals, plot creation and split/sample metadata,
+and the requirement that plotting does not tune the threshold. See
+[`week11-heldout-plots.md`](week11-heldout-plots.md), which includes test
+evidence and the three plots.
+
+The documented held-out AUC results are:
+
+| Score | AUC |
+| --- | ---: |
+| Chi-square | 0.5475 |
+| RS | 0.6850 |
+| Difference Histogram | 0.5875 |
+| Ensemble | 0.6675 |
 
 ## Lessons learned
 
-- Metric checks are most useful when they consume the official result file and
-  reuse the project's voting convention; parallel interpretations can repeat
-  earlier score-direction inconsistencies.
-- Pair-level metadata should be checked alongside image-level rows. Requiring
-  one clean and one stego row per held-out source catches split leakage and
-  missing class members.
-- Synthetic fixtures validate arithmetic and safeguards, but they cannot stand
-  in for the official test-set result.
+- Independent checks should use the official score normalization and voting
+  code so they do not repeat earlier score-direction inconsistencies.
+- Pair-level metadata checks complement image-row checks by confirming one
+  clean and one stego image per held-out source.
+- Synthetic tests validate arithmetic and safeguards; comparing against the
+  official CSV and JSON confirms the actual reported test results.
+- Lower held-out recall is a finding to document for later robustness work,
+  not a reason to alter the already locked configuration.
 
-## Team contributions recorded from this checkout
+## Team contributions
 
-| Member | Week 11 contribution visible in this checkout |
+| Member | Week 11 contribution |
 | --- | --- |
-| Arthur | Added the held-out result verifier, six focused tests, verification documentation, and passing-test evidence. |
-| Menishen | Assigned owner of the official held-out evaluation. Official output files were not available here for verification. |
-| Exzavier | Assigned owner of ROC/AUC and confusion-matrix plots. Plot files were not available here for verification. |
+| Arthur | Implemented and tested the independent verifier, documented the checks, captured test evidence, and confirmed the official metrics and confusion counts. |
+| Menishen | Ran the locked held-out evaluation and supplied the runner, predictions, summary metrics, tests, and evaluation documentation. |
+| Exzavier | Produced the held-out ROC/AUC comparison and confusion-matrix plots, plot tests, and plot documentation. |
 
-The last two entries describe the evidence available in this checkout, not a
-judgment about work performed elsewhere.
+## Progress against plan
 
-## Progress against plan and adjustment
-
-Arthur's assigned verification work is complete at the unit-test level. The
-team's full Week 11 milestone remains partial until the official results and
-plots are integrated. Next, integrate Menishen's CSV and JSON, run
-`python -m src.evaluation.heldout_metrics`, and attach the verification output.
-Then check that Exzavier's plots use those same 40 held-out rows. Keep the
-Week 10 weights, threshold, score direction, and detector behavior unchanged;
-do not retune based on held-out results. If official artifacts are maintained
-outside this checkout, bring them into the project branch before final
-submission so the team report can record the actual results.
+The team completed the Week 11 milestone as scheduled. The official runner,
+metric verification, and plots all use the same 40-image held-out set. No plan
+adjustment was needed. The Week 10 weights, threshold, score direction, and
+detector behavior remain unchanged; the recorded held-out results are not used
+to retune them.

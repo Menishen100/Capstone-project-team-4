@@ -15,11 +15,13 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
-from src.evaluation.calibration_metrics import (
-    classification_metrics,
-    ensemble_score,
-    predictions_from_scores,
+from src.ensemble.normalization import (
+    normalize_chi_square,
+    normalize_dh,
+    normalize_rs,
 )
+from src.ensemble.voting import EnsembleConfig, combine_detector_scores
+from src.evaluation.calibration_metrics import classification_metrics
 
 
 LOCKED_WEIGHTS = {
@@ -30,7 +32,8 @@ LOCKED_WEIGHTS = {
 LOCKED_THRESHOLD = 0.70
 EXPECTED_COUNTS = {"clean": 20, "stego": 20}
 RESULT_FIELDS = {
-    "source_id", "label", "normalized_chi", "normalized_rs", "normalized_dh",
+    "source_id", "label", "filename", "split", "chi_square_score", "rs_score",
+    "dh_score", "normalized_chi", "normalized_rs", "normalized_dh",
     "ensemble_score", "prediction",
 }
 
@@ -81,8 +84,10 @@ def verify_heldout_results(
     if len(rows) != 40:
         raise ValueError(f"expected exactly 40 held-out image rows; got {len(rows)}")
     if any(not RESULT_FIELDS.issubset(row) for row in rows):
-        missing = sorted(RESULT_FIELDS - set().union(*(set(row) for row in rows)))
+        missing = sorted(set().union(*(RESULT_FIELDS - set(row) for row in rows)))
         raise ValueError(f"prediction rows are missing required fields: {missing}")
+    if any(row.get("split") != "held_out_test" for row in rows):
+        raise ValueError("every prediction row must be explicitly held_out_test")
     ids = [str(row["source_id"]) for row in rows]
     if set(ids) != expected_sources or any(count != 2 for count in Counter(ids).values()):
         raise ValueError("prediction rows must contain only the 20 held-out sources, twice each")
@@ -90,28 +95,55 @@ def verify_heldout_results(
     if Counter(labels) != EXPECTED_COUNTS:
         raise ValueError("held-out rows must contain exactly 20 clean and 20 stego labels")
     for source_id in expected_sources:
-        pair_labels = [str(row["label"]).strip().lower() for row in rows if str(row["source_id"]) == source_id]
+        pair_rows = [row for row in rows if str(row["source_id"]) == source_id]
+        pair_labels = [str(row["label"]).strip().lower() for row in pair_rows]
         if Counter(pair_labels) != {"clean": 1, "stego": 1}:
             raise ValueError(f"source {source_id} must have one clean and one stego row")
+        metadata_row = next(row for row in heldout if row["source_id"] == source_id)
+        filenames = {str(row["label"]).strip().lower(): row["filename"] for row in pair_rows}
+        if filenames != {"clean": metadata_row["clean_filename"],
+                         "stego": metadata_row["stego_filename"]}:
+            raise ValueError(f"source {source_id} filenames do not match held-out metadata")
 
     config = summary.get("configuration", summary)
     weights = config.get("weights", config)
+    if "chi_weight" not in weights:
+        weights = {
+            "chi_weight": weights.get("chi_square_weight"),
+            "rs_weight": weights.get("rs_weight"),
+            "dh_weight": weights.get("dh_weight"),
+        }
     for key, expected in LOCKED_WEIGHTS.items():
         _close(weights.get(key), expected, key)
     _close(config.get("threshold"), LOCKED_THRESHOLD, "threshold")
 
-    expected_scores = []
+    expected_predictions = []
     for index, row in enumerate(rows):
-        score = ensemble_score(
-            float(row["normalized_chi"]),
-            float(row["normalized_rs"]),
-            float(row["normalized_dh"]),
-            LOCKED_WEIGHTS,
+        raw_scores = {
+            "chi_square": float(row["chi_square_score"]),
+            "rs": float(row["rs_score"]),
+            "dh": float(row["dh_score"]),
+        }
+        normalized = {
+            "chi_square": normalize_chi_square(raw_scores["chi_square"]),
+            "rs": normalize_rs(raw_scores["rs"]),
+            "dh": normalize_dh(raw_scores["dh"]),
+        }
+        for key, official_key in (("normalized_chi", "chi_square"),
+                                  ("normalized_rs", "rs"),
+                                  ("normalized_dh", "dh")):
+            _close(row[key], normalized[official_key], f"row {index} {key}")
+        decision = combine_detector_scores(
+            raw_scores,
+            EnsembleConfig(chi_square_weight=0.0, rs_weight=0.70,
+                           dh_weight=0.30, threshold=LOCKED_THRESHOLD),
         )
+        score = float(decision["ensemble_score"])
         _close(row["ensemble_score"], score, f"row {index} ensemble_score")
-        expected_scores.append(score)
+        expected_predictions.append(
+            "stego" if decision["label"] == "Suspicious" else "clean"
+        )
     predictions = [str(row["prediction"]).strip().lower() for row in rows]
-    expected_predictions = predictions_from_scores(expected_scores, LOCKED_THRESHOLD)
     if predictions != expected_predictions:
         raise ValueError("predictions do not match the locked threshold and official score direction")
 
@@ -123,8 +155,16 @@ def verify_heldout_results(
     reported_confusion = summary.get("confusion_matrix", summary)
     for key, value in metrics.items():
         _close(reported_metrics.get(key), value, key)
+    official_names = {"tp": "true_positive", "tn": "true_negative",
+                      "fp": "false_positive", "fn": "false_negative"}
     for key, value in confusion.items():
-        _close(reported_confusion.get(key, reported_confusion.get(key.upper())), value, key)
+        _close(reported_confusion.get(key, reported_confusion.get(
+            official_names[key], reported_confusion.get(key.upper()))), value, key)
+    counts = summary.get("image_counts", {})
+    if counts and counts != {"clean": 20, "stego": 20, "total": 40}:
+        raise ValueError(f"reported image_counts mismatch: {counts}")
+    if summary.get("evaluation_split", "held_out_test") != "held_out_test":
+        raise ValueError("summary evaluation_split must be held_out_test")
     return {"sample_count": 40, "class_counts": dict(EXPECTED_COUNTS),
             "confusion_matrix": confusion, "metrics": metrics,
             "configuration": {"weights": LOCKED_WEIGHTS.copy(), "threshold": LOCKED_THRESHOLD}}

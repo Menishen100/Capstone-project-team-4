@@ -2,9 +2,10 @@
 
 import pytest
 
-from src.evaluation.calibration_metrics import classification_metrics, ensemble_score
+from src.ensemble.normalization import normalize_chi_square, normalize_dh, normalize_rs
+from src.ensemble.voting import EnsembleConfig, combine_detector_scores
+from src.evaluation.calibration_metrics import classification_metrics
 from src.evaluation.heldout_metrics import (
-    LOCKED_WEIGHTS,
     confusion_matrix_counts,
     verify_heldout_results,
 )
@@ -22,24 +23,40 @@ def test_hand_calculated_metrics_and_all_confusion_matrix_cells():
 
 
 def _valid_artifacts():
-    metadata = [{"source_id": f"source-{i:03}", "split": "held_out_test"}
+    metadata = [{"source_id": f"source-{i:03}", "split": "held_out_test",
+                 "clean_filename": f"pair_{i:03}_clean.png",
+                 "stego_filename": f"pair_{i:03}_stego.png"}
                 for i in range(1, 21)]
     rows = []
     for i in range(1, 21):
         for label in ("clean", "stego"):
-            components = {"normalized_chi": 0.2, "normalized_rs": 0.1,
-                          "normalized_dh": 0.5}
-            score = ensemble_score(components["normalized_chi"],
-                                   components["normalized_rs"],
-                                   components["normalized_dh"], LOCKED_WEIGHTS)
-            rows.append({"source_id": f"source-{i:03}", "label": label,
-                         **components, "ensemble_score": score,
-                         "prediction": "stego" if score >= 0.7 else "clean"})
+            suspicious = (label == "stego" and i <= 10) or (label == "clean" and i > 10)
+            raw = {"chi_square": 0.2, "rs": 0.1 if suspicious else 0.9,
+                   "dh": 0.1 if suspicious else 0.9}
+            normalized = {"normalized_chi": normalize_chi_square(raw["chi_square"]),
+                          "normalized_rs": normalize_rs(raw["rs"]),
+                          "normalized_dh": normalize_dh(raw["dh"])}
+            decision = combine_detector_scores(
+                raw, EnsembleConfig(chi_square_weight=0.0, rs_weight=0.7,
+                                    dh_weight=0.3, threshold=0.7)
+            )
+            rows.append({
+                "source_id": f"source-{i:03}", "label": label,
+                "filename": f"pair_{i:03}_{label}.png", "split": "held_out_test",
+                "chi_square_score": raw["chi_square"], "rs_score": raw["rs"],
+                "dh_score": raw["dh"], **normalized,
+                "ensemble_score": decision["ensemble_score"],
+                "prediction": "stego" if decision["label"] == "Suspicious" else "clean",
+            })
     summary = {
-        "configuration": {"weights": LOCKED_WEIGHTS, "threshold": 0.7},
+        "configuration": {"chi_square_weight": 0.0, "rs_weight": 0.7,
+                           "dh_weight": 0.3, "threshold": 0.7},
         "metrics": {"accuracy": 0.5, "precision": 0.5,
-                    "recall": 1.0, "f1": 2 / 3},
-        "confusion_matrix": {"tp": 20, "tn": 0, "fp": 20, "fn": 0},
+                    "recall": 0.5, "f1": 0.5},
+        "confusion_matrix": {"true_positive": 10, "true_negative": 10,
+                             "false_positive": 10, "false_negative": 10},
+        "evaluation_split": "held_out_test",
+        "image_counts": {"clean": 20, "stego": 20, "total": 40},
     }
     return rows, metadata, summary
 
@@ -49,9 +66,9 @@ def test_verifies_40_heldout_rows_configuration_metrics_and_counts():
     result = verify_heldout_results(rows, metadata, summary)
     assert result["sample_count"] == 40
     assert result["class_counts"] == {"clean": 20, "stego": 20}
-    assert result["confusion_matrix"] == {"tp": 20, "tn": 0, "fp": 20, "fn": 0}
+    assert result["confusion_matrix"] == {"tp": 10, "tn": 10, "fp": 10, "fn": 10}
     assert result["metrics"] == {"accuracy": 0.5, "precision": 0.5,
-                                  "recall": 1.0, "f1": pytest.approx(2 / 3)}
+                                  "recall": 0.5, "f1": 0.5}
 
 
 def test_rejects_development_or_validation_rows():
