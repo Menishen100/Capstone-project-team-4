@@ -30,7 +30,30 @@ Week 11 predictions and metrics remain unchanged.
   `test_week12_error_analysis.py`, `test_week12_arthur_regression.py`,
   `test_week12_dh_errors.py`, and `test_payload_robustness.py`.
 
-## 3. Safeguards and interpretation
+## 3. Team evidence screenshots
+
+### 3.1 Menishen — Held-out error-case analysis
+
+![Menishen's Week 12 error-analysis evidence](../assets/week12-progress/menishen-error-analysis.svg)
+
+*Figure 1. Menishen's reproducible held-out error analysis and focused-test
+evidence. The analysis reads the locked Week 11 output without retuning it.*
+
+### 3.2 Arthur — Chi-square/RS error analysis
+
+![Arthur's Week 12 error-case summary](../assets/week12-progress/arthur-week12-error-summary.png)
+
+*Figure 2. Arthur's frozen error-group summary, including the exact official
+false-positive and false-negative source sets against the locked threshold.*
+
+### 3.3 Exzavier — Payload-rate robustness tests
+
+![Exzavier's Week 12 payload-robustness test evidence](../assets/week12-progress/week12-payload-robustness-tests.png)
+
+*Figure 3. Exzavier's passing payload-robustness test evidence for the five
+controlled randomized-LSB payload rates and the locked ensemble workflow.*
+
+## 4. Safeguards and interpretation
 
 The payload experiment is separate from the official paired dataset and does
 not replace the held-out result. Week 12 did not alter detector algorithms,
@@ -39,7 +62,7 @@ the locked statistical ensemble: lower-payload randomized LSB samples are more
 difficult to detect, while the experiment shows stronger detection at higher
 payload rates.
 
-## 4. Contributions of each team member
+## 5. Contributions of each team member
 
 | Team member | Week 12 contribution |
 | --- | --- |
@@ -48,7 +71,7 @@ payload rates.
 | **Exzavier Pickering — Member B** | Produced the DH error analysis, payload-rate robustness experiment, plots, CSV, and tests. |
 | **All members** | Preserved the immutable Week 11 evaluation and confirmed the Week 12 acceptance evidence. |
 
-## 5. Supporting evidence
+## 6. Supporting evidence
 
 - [Week 12 held-out error analysis](../week12-error-analysis.md)
 - [Arthur's Week 12 detector analysis](../week12-arthur-error-analysis.md)
