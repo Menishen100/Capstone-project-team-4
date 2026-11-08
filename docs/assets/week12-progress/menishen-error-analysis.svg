@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040" role="img" aria-labelledby="title description">
+  <title id="title">Menishen Week 12 held-out error analysis evidence</title>
+  <desc id="description">Terminal-style evidence of the Week 12 focused tests and generated false-positive and false-negative summary.</desc>
+  <rect width="1600" height="1040" fill="#0d1117"/>
+  <rect x="28" y="24" width="1544" height="992" rx="14" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+  <style>.t{font:24px Consolas,'Courier New',monospace;fill:#c9d1d9}.m{fill:#8b949e}.g{fill:#3fb950}.y{fill:#d29922}.b{font-weight:bold;fill:#f0f6fc}</style>
+  <text class="t m" x="62" y="78">PS C:\CapstoneProject&gt; .\.venv\Scripts\python.exe -m pytest tests/test_week12_error_analysis.py -q</text>
+  <text class="t g" x="62" y="132">9 passed in 0.38s</text>
+  <text class="t m" x="62" y="192">PS C:\CapstoneProject&gt; .\.venv\Scripts\python.exe -m src.evaluation.analyze_week12_errors</text>
+  <text class="t b" x="62" y="268">Week 12 Held-Out Error Analysis Complete</text>
+  <text class="t" x="62" y="328">Locked threshold retained: <tspan class="y">0.70</tspan></text>
+  <text class="t" x="62" y="382">TP=9, TN=16, <tspan class="y">FP=4, FN=11</tspan></text>
+  <text class="t" x="62" y="448">False-positive source IDs: <tspan class="g">083, 084, 088, 096</tspan></text>
+  <text class="t" x="62" y="504">False-negative source IDs: <tspan class="g">081, 082, 085, 090, 091, 092, 094, 097, 098, 099, 100</tspan></text>
+  <text class="t" x="62" y="584">Mean normalized FN scores: Chi=0.0941, RS=0.5745, DH=0.6498</text>
+  <text class="t" x="62" y="644">FN within 0.05 of threshold: <tspan class="y">3 of 11</tspan></text>
+  <text class="t" x="62" y="724">Error-case CSV: <tspan class="g">data\week12_error_cases.csv</tspan></text>
+  <rect x="56" y="780" width="1488" height="148" rx="10" fill="#172c22" stroke="#40d879" stroke-width="2"/>
+  <text class="t g" x="82" y="838">No weights, threshold, preprocessing, detector behavior, predictions,</text>
+  <text class="t g" x="82" y="884">or Week 11 metrics were changed.</text>
+  <text class="t m" x="62" y="976">Menishen Week 12 — held-out error-case analysis and robustness integration evidence.</text>
+</svg>
