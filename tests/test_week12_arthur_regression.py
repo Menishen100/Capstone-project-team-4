@@ -4,11 +4,11 @@ import pytest
 
 from src.ensemble.normalization import normalize_chi_square, normalize_rs
 from src.evaluation.analyze_arthur_week12 import detector_summary
-from src.evaluation.analyze_week12_errors import analyze_rows, read_predictions
+from src.evaluation.analyze_week12_errors import classify_cases, load_official_predictions
 
 
 def test_official_false_negative_and_false_positive_source_ids_remain_stable():
-    groups, _ = analyze_rows(read_predictions("data/week11_heldout_predictions.csv"))
+    groups = classify_cases(load_official_predictions("data/week11_heldout_predictions.csv"))
     assert [row["source_id"] for row in groups["false_negative"]] == [
         "source-081", "source-082", "source-085", "source-090", "source-091",
         "source-092", "source-094", "source-097", "source-098", "source-099", "source-100",
@@ -19,7 +19,7 @@ def test_official_false_negative_and_false_positive_source_ids_remain_stable():
 
 
 def test_official_known_false_negative_score_is_reproducibly_read():
-    rows = read_predictions("data/week11_heldout_predictions.csv")
+    rows = load_official_predictions("data/week11_heldout_predictions.csv")
     known = next(row for row in rows if row["source_id"] == "source-081" and row["label"] == "stego")
     assert float(known["ensemble_score"]) == pytest.approx(0.478368044288772)
     assert float(known["rs_score"]) == pytest.approx(0.5152473038304203)
@@ -31,6 +31,6 @@ def test_official_rs_inversion_and_chi_normalization_are_frozen():
 
 
 def test_detector_group_means_are_computed_for_all_four_cells():
-    summary = detector_summary(read_predictions("data/week11_heldout_predictions.csv"))
+    summary = detector_summary(load_official_predictions("data/week11_heldout_predictions.csv"))
     assert [summary[cell]["count"] for cell in ("true_positive", "true_negative", "false_positive", "false_negative")] == [9, 16, 4, 11]
     assert summary["false_negative"]["mean_normalized_rs"] >= 0.0

@@ -3,16 +3,15 @@
 from __future__ import annotations
 
 import argparse
-from collections import defaultdict
 from pathlib import Path
 from typing import Any, Mapping
 
-from src.evaluation.analyze_week12_errors import analyze_rows, read_predictions
+from src.evaluation.analyze_week12_errors import classify_cases, load_official_predictions
 
 
 def detector_summary(rows: list[Mapping[str, Any]]) -> dict[str, dict[str, float | int]]:
     """Calculate raw and normalized Chi-square/RS means by confusion cell."""
-    groups, _ = analyze_rows(rows)
+    groups = classify_cases(rows)
     summary: dict[str, dict[str, float | int]] = {}
     for cell, entries in groups.items():
         result: dict[str, float | int] = {"count": len(entries)}
@@ -39,7 +38,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--predictions", type=Path, default=Path("data/week11_heldout_predictions.csv"))
     args = parser.parse_args(argv)
-    print(render_markdown(detector_summary(read_predictions(args.predictions))))
+    print(render_markdown(detector_summary(load_official_predictions(args.predictions))))
     print("\nDiagnostic only: Chi-square's locked ensemble weight is 0.00; RS weight is 0.70.")
     return 0
 

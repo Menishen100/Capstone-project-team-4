@@ -46,7 +46,7 @@ Chi-square-driven FP pattern.
 
 The CSV records `ensemble_score - 0.70`; negative values are below threshold.
 Six of 15 errors are within 0.05 of the threshold, and 10 of 15 are within
-0.10. Among the 11 false negatives, two are within 0.05 and six are within
+0.10. Among the 11 false negatives, three are within 0.05 and six are within
 0.10. The remaining cases are farther from the decision boundary, including
 source-081 (0.4784, distance -0.2216) and source-090 (0.4999, distance
 -0.2001). Several false positives are close: source-088 is 0.0123 above
