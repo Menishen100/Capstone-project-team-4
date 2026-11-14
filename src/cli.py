@@ -9,10 +9,15 @@ from __future__ import annotations
 
 import argparse
 import math
+import sys
 from collections.abc import Mapping, Sequence
 from numbers import Real
 from pathlib import Path
 from typing import Any
+
+# Keep direct execution supported alongside ``python -m src.cli``.
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.ensemble.voting import combine_detector_scores
 from src.evaluation.run_heldout_evaluation import LOCKED_CONFIG
@@ -132,6 +137,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(format_analysis(analyze_image(arguments.image)))
     except (OSError, ValueError) as error:
         parser.error(f"could not analyze '{arguments.image}': {error}")
+    except Exception as error:
+        parser.error(f"detector analysis failed: {error}")
     return 0
 
 
