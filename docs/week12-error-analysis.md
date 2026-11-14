@@ -106,3 +106,6 @@ Week 11 FP/FN source-ID populations.
 
 *Figure 1. Menishen Week 12 — Held-out error-case analysis and robustness
 integration evidence.*
+
+Arthur's detector-specific score comparison and regression evidence are in
+[Arthur's Week 12 analysis](week12-arthur-error-analysis.md).

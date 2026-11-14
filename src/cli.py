@@ -1,108 +1,144 @@
-"""User-facing command line interface for one-image steganalysis."""
+"""Release-candidate command-line interface for one-image steganalysis.
+
+The CLI intentionally reuses the existing detector implementations, the Week 9
+normalization/voting boundary, and the locked Week 10 configuration. It does
+not calibrate, retrain, or change any detector score.
+"""
 
 from __future__ import annotations
 
 import argparse
-import json
+import math
 import sys
+from collections.abc import Mapping, Sequence
+from numbers import Real
 from pathlib import Path
+from typing import Any
 
-# When invoked as ``python src/cli.py``, Python starts with ``src/`` on the
-# import path. Add the project root so the same package imports work as with
-# ``python -m src.cli``.
+# Keep direct execution supported alongside ``python -m src.cli``.
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from PIL import Image, UnidentifiedImageError
-
-from src.detectors import ChiSquareDetector, DifferenceHistogramDetector, RSAnalysisDetector
 from src.ensemble.voting import combine_detector_scores
 from src.evaluation.run_heldout_evaluation import LOCKED_CONFIG
+from src.evaluation.run_preliminary_scores import default_detectors
 from src.preprocessing import load_image
 
-VERSION = "1.0.0"
-SUPPORTED_FORMATS = {"PNG", "JPEG", "BMP", "TIFF"}
+
+DETECTOR_NAMES = ("chi_square", "rs", "dh")
 
 
-class UserInputError(Exception):
-    """An input or image problem that should be shown without a traceback."""
+def _bounded_score(result: Mapping[str, Any]) -> float:
+    """Extract a detector's common-interface score without re-normalizing it."""
+    score = result.get("score")
+    if (
+        isinstance(score, bool)
+        or not isinstance(score, Real)
+        or not math.isfinite(float(score))
+        or not 0.0 <= float(score) <= 1.0
+    ):
+        raise ValueError("detector returned a non-finite score outside [0, 1]")
+    return float(score)
 
 
-def analyze_image(path: str | Path) -> dict[str, object]:
-    """Run the project's detectors and locked ensemble on one supported image."""
-    image_path = Path(path)
-    if not image_path.is_file():
-        raise UserInputError(f"image file does not exist: {image_path}")
-    try:
-        with Image.open(image_path) as opened:
-            if opened.format not in SUPPORTED_FORMATS:
-                raise UserInputError(
-                    f"unsupported image format: {opened.format or 'unknown'}; "
-                    "supported formats are PNG, JPEG, BMP, and TIFF"
-                )
-            opened.verify()
-        pixels = load_image(image_path)
-    except UserInputError:
-        raise
-    except (UnidentifiedImageError, OSError, ValueError) as error:
-        raise UserInputError(f"cannot read image '{image_path}': {error}") from error
+def analyze_image(
+    image_path: str | Path,
+    *,
+    detectors: Mapping[str, Any] | None = None,
+) -> dict[str, object]:
+    """Analyze one image with the existing locked ensemble configuration.
 
-    detectors = {
-        "chi_square": ChiSquareDetector(),
-        "rs": RSAnalysisDetector(),
-        "dh": DifferenceHistogramDetector(),
+    Args:
+        image_path: A file that Pillow can read. Grayscale and RGB images retain
+            their pixel representation; other readable Pillow modes follow the
+            project's established preprocessing conversion to RGB.
+        detectors: Optional test seam. Production calls use the three project
+            detector instances returned by :func:`default_detectors`.
+
+    Returns:
+        A display-ready, structured result containing raw detector scores,
+        direction-aligned scores, locked configuration values, and the final
+        ``Clean`` or ``Suspicious`` decision.
+    """
+    path = Path(image_path)
+    image = load_image(path)
+    active_detectors = dict(detectors or default_detectors())
+    if set(active_detectors) != set(DETECTOR_NAMES):
+        raise ValueError("detectors must provide chi_square, rs, and dh entries")
+
+    raw_scores = {
+        detector_name: _bounded_score(active_detectors[detector_name].analyze(image))
+        for detector_name in DETECTOR_NAMES
     }
-    try:
-        raw_scores = {
-            name: float(detector.analyze(pixels)["score"])
-            for name, detector in detectors.items()
-        }
-        result = combine_detector_scores(raw_scores, LOCKED_CONFIG)
-    except Exception as error:
-        raise UserInputError(f"detector analysis failed: {error}") from error
-    return {"image": str(image_path), "detector_scores": raw_scores, **result}
+    ensemble = combine_detector_scores(raw_scores, LOCKED_CONFIG)
+    diagnostics = ensemble["diagnostics"]
+    normalized_scores = diagnostics["normalized_scores"]
+
+    return {
+        "image_path": str(path),
+        "image_mode": "L" if image.ndim == 2 else "RGB",
+        "raw_scores": raw_scores,
+        "normalized_scores": normalized_scores,
+        "ensemble_score": float(ensemble["ensemble_score"]),
+        "classification": str(ensemble["label"]),
+        "weights": diagnostics["weights"],
+        "threshold": float(diagnostics["threshold"]),
+    }
+
+
+def format_analysis(analysis: Mapping[str, object]) -> str:
+    """Format a concise, explainable release-candidate CLI report."""
+    raw_scores = analysis["raw_scores"]
+    normalized_scores = analysis["normalized_scores"]
+    weights = analysis["weights"]
+    assert isinstance(raw_scores, Mapping)
+    assert isinstance(normalized_scores, Mapping)
+    assert isinstance(weights, Mapping)
+
+    return "\n".join(
+        (
+            "Multi-Feature Steganalysis Toolkit - Release Candidate",
+            f"Image: {analysis['image_path']} ({analysis['image_mode']})",
+            "Locked ensemble: "
+            f"Chi-square={float(weights['chi_square']):.2f}, "
+            f"RS={float(weights['rs']):.2f}, "
+            f"DH={float(weights['dh']):.2f}, "
+            f"threshold={float(analysis['threshold']):.2f}",
+            "Detector scores (raw -> direction-aligned suspiciousness):",
+            f"  Chi-square: {float(raw_scores['chi_square']):.4f} -> "
+            f"{float(normalized_scores['chi_square']):.4f}",
+            f"  RS:         {float(raw_scores['rs']):.4f} -> "
+            f"{float(normalized_scores['rs']):.4f}",
+            f"  DH:         {float(raw_scores['dh']):.4f} -> "
+            f"{float(normalized_scores['dh']):.4f}",
+            f"Ensemble score (not a probability): {float(analysis['ensemble_score']):.4f}",
+            f"Final classification: {analysis['classification']}",
+        )
+    )
 
 
 def build_parser() -> argparse.ArgumentParser:
+    """Create the command-line parser without duplicating analysis behavior."""
     parser = argparse.ArgumentParser(
-        prog="python -m src.cli",
-        description="Analyze one image with the statistical LSB steganalysis ensemble.",
+        description=(
+            "Analyze one image using the project's locked statistical "
+            "steganalysis ensemble."
+        )
     )
-    parser.add_argument("image", nargs="?", help="image file to analyze")
-    parser.add_argument("--version", action="version", version=f"%(prog)s {VERSION}")
-    parser.add_argument("--verbose", action="store_true", help="show locked weights and normalized scores")
-    parser.add_argument("--json", action="store_true", help="write the result as JSON")
+    parser.add_argument("image", type=Path, help="Path to an image readable by Pillow")
     return parser
 
 
-def main(argv: list[str] | None = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
+    """Run the CLI and return a conventional process exit code."""
     parser = build_parser()
-    args = parser.parse_args(argv)
-    if not args.image:
-        parser.error("an image path is required")
+    arguments = parser.parse_args(argv)
     try:
-        result = analyze_image(args.image)
-    except UserInputError as error:
-        print(f"Error: {error}", file=sys.stderr)
-        return 2
-
-    diagnostics = result["diagnostics"]
-    if args.json:
-        print(json.dumps(result, indent=2, default=float))
-        return 0
-    print("Multi-Feature Steganalysis Toolkit\n")
-    print(f"Image: {result['image']}\n")
-    print(f"Result: {result['label']}")
-    print(f"Ensemble Score: {result['ensemble_score']:.4f}")
-    print(f"Decision Threshold: {diagnostics['threshold']:.4f}\n")
-    print("Detector Results:")
-    scores = result["detector_scores"]
-    print(f"Chi-square: {scores['chi_square']:.4f}")
-    print(f"RS:         {scores['rs']:.4f}")
-    print(f"DH:         {scores['dh']:.4f}")
-    if args.verbose:
-        print("\nLocked weights: Chi-square=0.00, RS=0.70, DH=0.30")
-        print(f"Normalized scores: {diagnostics['normalized_scores']}")
+        print(format_analysis(analyze_image(arguments.image)))
+    except (OSError, ValueError) as error:
+        parser.error(f"could not analyze '{arguments.image}': {error}")
+    except Exception as error:
+        parser.error(f"detector analysis failed: {error}")
     return 0
 
 

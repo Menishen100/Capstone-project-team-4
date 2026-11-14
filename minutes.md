@@ -15,3 +15,4 @@ Meeting minutes are organized by the project week and aligned with the approved 
 - [Week 9 meeting minutes](minutes/week09_meeting_minutes.md) - Meeting 13: scheduled ensemble-baseline review and Week 10 calibration preparation.
 - [Week 10 meeting minutes](minutes/week10_meeting_minutes.md) - Meeting 14: validation-based ensemble calibration, selected configuration verification, and Week 11 held-out evaluation preparation.
 - [Week 11 meeting minutes](minutes/week11_meeting_minutes.md) - Meeting 15: locked held-out evaluation, independent metric verification, and ROC/AUC and confusion-matrix evidence.
+- [Week 12 meeting minutes](minutes/week12_meeting_minutes.md) - Meeting 16: held-out error analysis, detector regression coverage, and payload-rate robustness evidence.
