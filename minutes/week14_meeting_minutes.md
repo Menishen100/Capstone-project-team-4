@@ -38,7 +38,7 @@
 
 ### Next meeting
 
-- **Date and time:** To be scheduled by the team.
+- **Dates:** November 23 and November 25, 2026
 - **Focus:** Week 15 slide completion, live-demo rehearsal, and final
   presentation issue review.
 - **Data safeguard:** Preserve the tagged release and official Week 11
