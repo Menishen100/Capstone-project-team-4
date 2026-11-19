@@ -17,3 +17,4 @@ Meeting minutes are organized by the project week and aligned with the approved 
 - [Week 11 meeting minutes](minutes/week11_meeting_minutes.md) - Meeting 15: locked held-out evaluation, independent metric verification, and ROC/AUC and confusion-matrix evidence.
 - [Week 12 meeting minutes](minutes/week12_meeting_minutes.md) - Meeting 16: held-out error analysis, detector regression coverage, and payload-rate robustness evidence.
 - [Week 13 meeting minutes](minutes/week13_meeting_minutes.md) - Meeting 17: release-candidate CLI, integration verification, user workflow, and optional GUI review.
+- [Week 14 meeting minutes](minutes/week14_meeting_minutes.md) - Meeting 18: final QA, reproducibility review, release audit, and final-tag preparation.
