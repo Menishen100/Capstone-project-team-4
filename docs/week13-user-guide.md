@@ -326,7 +326,7 @@ These screenshots demonstrate:
 5. The ensemble score being displayed
 6. The final Clean or Suspicious classification being displayed
 
-Together, the screenshots demonstrate the complete user-facing release-candidate workflow.
+Together, the screenshots demonstrate the complete release-candidate CLI user workflow.
 
 ---
 

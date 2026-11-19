@@ -8,8 +8,7 @@ The project was developed as a cybersecurity capstone by a three-member team. In
 detector, dataset, evaluation, ensemble, testing, and documentation contributions were
 integrated into a single statistical steganalysis pipeline.
 
-The current project is a **release candidate** with a command-line interface for analyzing
-one image at a time.
+The current project is a **release candidate** with a command-line interface and an graphical user interface for analyzing one image at a time.
 
 ---
 
@@ -62,6 +61,7 @@ The current toolkit provides:
 - Release-candidate command-line interface
 - User-facing Clean/Suspicious results
 - Concise command-line error handling
+- Graphical user interface
 
 ---
 
@@ -155,6 +155,7 @@ scipy>=1.12
 pytest>=8.0
 matplotlib>=3.11.2
 scikit-learn>=1.9.1
+reportlab>=4.0
 ```
 
 ---
@@ -467,7 +468,7 @@ The project's randomized-LSB dataset generator is more restrictive than the anal
 Dataset generation expects:
 
 - PNG images
--  Grayscale (`L`) or RGB mode
+- Grayscale (`L`) or RGB mode
 
 This restriction helps preserve lossless image data during controlled LSB experiments.
 
@@ -523,6 +524,74 @@ The metadata records information such as:
 - generation status
 - embedding statistics
 - source/license information
+
+### Dataset Reproducibility
+
+The controlled dataset is organized as paired clean and randomized-LSB stego images.
+
+Clean images are stored in:
+
+```
+dataset/clean/
+```
+
+Generated stego counterparts are stored in:
+
+```
+dataset/stego/
+```
+
+Dataset metadata is stored in:
+
+```
+data/metadata.csv
+```
+
+The metadata records the source ID, clean, and stego filenames, payload rate, random seed, image mode, dimensions, experimental split, generation status, embedding statistics, and source/license information.
+
+The committed clean-image provenance inventory is stored in:
+
+```
+data/clean_metadata.csv
+```
+
+The original clean images were prepared separately and committed to `dataset/clean/`. Their Art Institute of Chicago source and attribution information is recorded in `data/clean_metadata.csv`.
+
+The clean dataset can be validated with:
+
+```
+python -m src.evaluation.validate_dataset dataset/clean data/clean_metadata.csv --expected-count 100 --report data/clean_validation_report.json
+```
+
+The complete paired randomized-LSB dataset is generated with:
+
+```
+python -m src.evaluation.generate_dataset dataset/clean data/clean_metadata.csv dataset/stego data/metadata.csv --payload-rate 0.25 --seed 20260920
+```
+
+The generation workflow uses the master seed `20260920` and each stable source ID to derive deterministic per-image embedding seeds, which are recorded in `data/metadata.csv`.
+
+Randomized LSB embedding is implemented in:
+
+```
+src/lsb_embedder.py
+```
+
+The `embed_lsb()` function accepts a clean source image, payload rate, random seed, and output directory. Using the same clean image, payload rate, and recorded random seed makes the randomized embedding procedure reproducible.
+
+Additional dataset-generation details are documented in:
+
+```
+docs/dataset-protocol.md
+```
+
+The primary experimental dataset uses a payload rate of:
+
+```
+0.25
+```
+
+The random seed associated with each generated stego image is recorded in `data/metadata.csv`
 
 ---
 
@@ -669,16 +738,16 @@ and integration components.
 
 Testing is intended to verify behavior such as:
 
-- detector score ranges
-- grayscale and RGB handling
-- preprocessing behavior
-- normalization
-- weighted voting
-- threshold behavior
-- dataset generation
-- evaluation calculations
-- plotting utilities
-- payload robustness
+- Detector score ranges
+- Grayscale and RGB handling
+- Preprocessing behavior
+- Normalization
+- Weighted voting
+- Threshold behavior
+- Dataset generation
+- Evaluation calculations
+- Plotting utilities
+- Payload robustness
 - CLI integration and error handling
 
 ---
@@ -689,6 +758,7 @@ Testing is intended to verify behavior such as:
 Capstone-project-team-4/
 |
 |-- data/
+|   |-- clean_metadata.csv
 |   |-- metadata.csv
 |   |-- evaluation CSV files
 |   |-- payload-robustness results
@@ -701,12 +771,16 @@ Capstone-project-team-4/
 |   |-- evaluation documentation
 |   |-- assets/
 |
+|-- scripts/
+|   |-- report/export utility scripts
+|
 |-- slides/
 |
 |-- src/
 |   |-- cli.py
 |   |-- preprocessing.py
 |   |-- lsb_embedder.py
+|   |-- gui.py
 |   |
 |   |-- detectors/
 |   |   |-- chi_square.py
@@ -758,7 +832,9 @@ Clean / Suspicious
          ↓
 Evaluation and visual evidence
          ↓
-Release-candidate CLI
+User Interfaces
+         ↓
+CLI / GUI
 ```
 
 ## Team
@@ -776,7 +852,7 @@ and regression/integration verification.
 ### Exzavier Pickering — Team Member B
 
 Primary technical contributions include Difference Histogram development, evaluation visualization,
-ROC/AUC and confusion-matrix evidence, payload-rate robustness analysis, error analysis, and user-facing release documentation.
+ROC/AUC and confusion-matrix evidence, payload-rate robustness analysis, error analysis, user-facing release documentation, and optional GUI development.
 
 ---
 
@@ -786,18 +862,20 @@ The toolkit has progressed from individual detector prototypes into an integrate
 
 At the current stage, the repository includes:
 
-- paired experimental dataset generation
-- all three statistical detectors
-- shared preprocessing
-- score normalization
-- weighted ensemble voting
-- locked validation-selected configuration
-- held-out evaluation
+- Paired experimental dataset generation
+- All three statistical detectors
+- Shared preprocessing
+- Score normalization
+- Weighted ensemble voting
+- Locked validation-selected configuration
+- Held-out evaluation
 - ROC/AUC and confusion-matrix evidence
-- payload-rate robustness testing
-- automated tests
-- release-candidate command-line interface
-- user documentation and visual workflow evidence
+- Payload-rate robustness testing
+- Automated tests
+- Release-candidate command-line interface
+- Graphical user interface
+- User documentation and visual workflow evidence
+
 
 Future improvements could investigate additional steganography techniques, alternative statistical features,
-broader datasets, improved low-payload detection, and optional graphical user-interface support.
+broader datasets, and improved low-payload detection.
